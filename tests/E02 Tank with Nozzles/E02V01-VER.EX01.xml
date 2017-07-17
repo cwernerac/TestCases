@@ -185,7 +185,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                            Value = "DN 80"
+                            Value = "80"
                             Format = "string"/>
                         <GenericAttribute
                             Name = "NominalDiameterStandardSpecialization"
@@ -195,7 +195,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterTypeRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                            Value = "DN"
+                            Value = ""
                             Format = "string"/>
                     </GenericAttributes>
                 </Node>
@@ -224,7 +224,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                            Value = "DN 50"
+                            Value = "50"
                             Format = "string"/>
                         <GenericAttribute
                             Name = "NominalDiameterStandardSpecialization"
@@ -234,7 +234,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterTypeRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                            Value = "DN"
+                            Value = ""
                             Format = "string"/>
                     </GenericAttributes>
                 </Node>
@@ -263,7 +263,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                            Value = "DN 50"
+                            Value = "50"
                             Format = "string"/>
                         <GenericAttribute
                             Name = "NominalDiameterStandardSpecialization"
@@ -273,7 +273,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterTypeRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                            Value = "DN"
+                            Value = ""
                             Format = "string"/>
                     </GenericAttributes>
                 </Node>
@@ -309,7 +309,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                            Value = "DN 25"
+                            Value = "25"
                             Format = "string"/>
                         <GenericAttribute
                             Name = "NominalDiameterStandardSpecialization"
@@ -319,7 +319,7 @@
                         <GenericAttribute
                             Name = "NominalDiameterTypeRepresentationAssignmentClass"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                            Value = "DN"
+                            Value = ""
                             Format = "string"/>
                     </GenericAttributes>
                 </Node>
