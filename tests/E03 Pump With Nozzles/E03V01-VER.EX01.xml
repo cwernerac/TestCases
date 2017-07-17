@@ -14,12 +14,23 @@
         ID = "PumpC"
         TagName = "P-4713"
         ComponentClass = "CentrifugalPump"
-        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416834">        
-        <GenericAttributes Number = "1" Set = "DexpiAttributes">
-            <GenericAttribute Name="FunctionalObjectDescriptionAssignmentClass"
-                              AttributeURI="http://data.posccaesar.org/rdl/RDS2101566251"
-                              Value="1502_Pump_centrifugal_type"
-                              Format="string"/>
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416834">
+        <GenericAttributes Number = "3" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "EquipmentDescriptionAssignmentClass"
+                AttributeURI = "http://data.posccaesar.org/rdl/RDS2181987301"
+                Value = "1502_Pump_centrifugal_type"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "P"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "4713"
+                Format = "string"/>
         </GenericAttributes>
         <Equipment
             ID = "Chamber1"
@@ -63,18 +74,18 @@
         </Equipment>
         <Nozzle
             ID = "N-1"
-            ComponentClass="Nozzle"
-            ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214">
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
             <ConnectionPoints NumPoints = "2">
-                <Node ID="N1"/>
-                <Node ID="N2" Type="process"/>
+                <Node ID = "N1"/>
+                <Node ID = "N2" Type = "process"/>
             </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes" >
-            <GenericAttribute
-                Name = "SubTagNameAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                Value = "N-1"
-                Format = "string"/>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-1"
+                    Format = "string"/>
             </GenericAttributes>
         </Nozzle>
     </Equipment>
