@@ -1,3 +1,0 @@
-alle Nozzles auﬂer N-1:
-- NominalDiameterRepresentationAssignmentClass ist nur Zahl, z.B. "80"
-- NominalDiameterTypeRepresentationAssignmentClass ist immer ""
