@@ -1,0 +1,2 @@
+FunctionalObjectDescription -> EquipmentDescription
+TagNamePrefix and TagNameSequence bei der Pumpe fehlen
