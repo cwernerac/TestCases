@@ -1,0 +1,13 @@
+aus ISSUES entfernt:
+    ID may not start with a Number, so the PipingNetworkSegment's ID should be something like:
+    P80-75HB13-MNb-47132
+
+    Resulting error after verification:
+    Line 168: Error: Invalid XML document: Element 'PipingNetworkSegment', attribute 'ID': '80-75HB13-MNb-47132' is not a valid value of the atomic type 'xs:ID'.
+-> Die ID ist ohne jede Bedeutung und dient nur für Verweise innerhalb der XML-Datei. Nur zur besseren Lesbarkeit der XMLs nehmen wir etwas Sinnvolles, z.B. die Rohrleitungsnummer: 'PNS-47132' 
+
+Woher kommt die Chamber bei der Pump? Woher die Attribute?
+
+bei den Equipments TagNamePrefix (P bzw. H) und SequenceNumber (1009/4713) ergänzen
+
+Attribute Rohrleitung: analog zu case P01
