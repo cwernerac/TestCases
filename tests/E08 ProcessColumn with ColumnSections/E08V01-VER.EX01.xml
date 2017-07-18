@@ -27,7 +27,7 @@
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N-1"
+                    Value = "N1"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
@@ -43,7 +43,7 @@
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N-2"
+                    Value = "N2"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
@@ -59,7 +59,7 @@
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N-3"
+                    Value = "N3"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
@@ -75,7 +75,7 @@
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N-4"
+                    Value = "N4"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
@@ -105,6 +105,13 @@
             ID = "ColumnSection2"
             ComponentClass = "ColumnSection"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnSection">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "S2"
+                    Format = "string"/>
+            </GenericAttributes>
             <Equipment
                 ID = "CTA"
                 ComponentClass = "ColumnTraysArrangement"
