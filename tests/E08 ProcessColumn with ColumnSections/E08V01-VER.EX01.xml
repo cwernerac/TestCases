@@ -87,7 +87,7 @@
                 ID = "CPA"
                 ComponentClass = "ColumnPackingsArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnPackingsArrangement">
-                <GenericAttributes Number = "2">
+                <GenericAttributes Number = "2" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "SubTagNameAssignmentClass"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
@@ -116,7 +116,7 @@
                 ID = "CTA"
                 ComponentClass = "ColumnTraysArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnTraysArrangement">
-                <GenericAttributes Number = "2">
+                <GenericAttributes Number = "2" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "SubTagNameAssignmentClass"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
