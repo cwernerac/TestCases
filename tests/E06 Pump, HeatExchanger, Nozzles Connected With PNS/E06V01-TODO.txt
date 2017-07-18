@@ -1,13 +1,10 @@
-aus ISSUES entfernt:
-    ID may not start with a Number, so the PipingNetworkSegment's ID should be something like:
-    P80-75HB13-MNb-47132
+SequenceNumber HeatEx ist 1009
+HeatEx ist ein PlateAndShellHeatExchanger
 
-    Resulting error after verification:
-    Line 168: Error: Invalid XML document: Element 'PipingNetworkSegment', attribute 'ID': '80-75HB13-MNb-47132' is not a valid value of the atomic type 'xs:ID'.
--> Die ID ist ohne jede Bedeutung und dient nur für Verweise innerhalb der XML-Datei. Nur zur besseren Lesbarkeit der XMLs nehmen wir etwas Sinnvolles, z.B. die Rohrleitungsnummer: 'PNS-47132' 
+bei beiden equipments: die PipingNodes der VERBUNDENEN Nozzles haben NominalDiameters wie das PNSystem (1*Uriref, 3*leerer String weil nicht in Grafik)
 
-Woher kommt die Chamber bei der Pump? Woher die Attribute?
+Das Segment ist VON der Pumple ZUM HeatEx (Pumpensymbol zeigt Richtung an)
 
-bei den Equipments TagNamePrefix (P bzw. H) und SequenceNumber (1009/4713) ergänzen
+An der Pumpe ist Nozzle 2 verbunden, nicht Nozzle 1
 
-Attribute Rohrleitung: analog zu case P01
+-> ähnliche Änderungen auch bei E04 und E05 (hier aber keine NominalDiameters bei den PipingNodes)
