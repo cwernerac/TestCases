@@ -89,7 +89,7 @@
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N-2"
+                    Value = "N-1"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
