@@ -1,0 +1,7 @@
+die SubTagName der Nozzles ist N1, ..., nicht N-1
+
+bei den SubTaggedColumnSections fehlt der SubTagName
+
+bei ColumnPackingsArrangement fehlt Packing Tyoe 
+
+bei ColumnTraysArrangement fehlt numberOfTrays
