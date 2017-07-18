@@ -15,52 +15,64 @@
         TagName = "H-1009"
         ComponentClass = "HeatExchanger"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS304199">
-        <Nozzle
-            ID = "N-2"
-            ComponentClass="Nozzle"
-            ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214">
-            <ConnectionPoints NumPoints = "2">
-                <Node ID="N21"/>
-                <Node ID="N22" Type="process"/>
-            </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes" >
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
             <GenericAttribute
-                Name = "SubTagNameAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                Value = "N-2"
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "H"
                 Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "1001"
+                Format = "string"/>
+        </GenericAttributes>
+        <Nozzle
+            ID = "H1009-N2"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1009-N2-N1"/>
+                <Node ID = "H1009-N2-N2" Type = "process"/>
+            </ConnectionPoints>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-2"
+                    Format = "string"/>
             </GenericAttributes>
         </Nozzle>
         <Nozzle
-            ID = "N-3"
-            ComponentClass="Nozzle"
-            ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214">
+            ID = "H1009-N3"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
             <ConnectionPoints NumPoints = "2">
-                <Node ID="N31"/>
-                <Node ID="N32" Type="process"/>
+                <Node ID = "H1009-N3-N1"/>
+                <Node ID = "H1009-N3-N2" Type = "process"/>
             </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes" >
-            <GenericAttribute
-                Name = "SubTagNameAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                Value = "N-3"
-                Format = "string"/>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-3"
+                    Format = "string"/>
             </GenericAttributes>
         </Nozzle>
         <Nozzle
-            ID = "N-4"
-            ComponentClass="Nozzle"
-            ComponentClassURI="http://data.posccaesar.org/rdl/RDS415214">
+            ID = "H1009-N4"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
             <ConnectionPoints NumPoints = "2">
-                <Node ID="N41"/>
-                <Node ID="N42" Type="process"/>
+                <Node ID = "H1009-N4-N1"/>
+                <Node ID = "H1009-N4-N2" Type = "process"/>
             </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes" >
-            <GenericAttribute
-                Name = "SubTagNameAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                Value = "N-4"
-                Format = "string"/>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-4"
+                    Format = "string"/>
             </GenericAttributes>
         </Nozzle>
     </Equipment>
