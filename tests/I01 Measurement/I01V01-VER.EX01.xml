@@ -13,13 +13,23 @@
     <Equipment
         ID = "T01"
         TagName = "T01"
-        ComponentName = "TankShape1"
         ComponentClass = "Tank"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS445139">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "T"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "01"
+                Format = "string"/>
+        </GenericAttributes>
         <Nozzle
             TagName = "N3"
             ID = "T01_N3"
-            ComponentName = "NozzleWithDipTubeShape1"
             ComponentClass = "Nozzle"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
             <ConnectionPoints NumPoints = "2">
@@ -32,37 +42,16 @@
         ID = "PNS47999"
         ComponentClass = "PipingNetworkSystem"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
-        <GenericAttributes Number = "1" Set = "DexpiAttributes">
-            <GenericAttribute
-                Name = "LineNumberAssignmentClass"
-                Value = "47999"
-                Format = "string"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/LineNumberAssignmentClass"/>
-        </GenericAttributes>
         <PipingNetworkSegment
             ID = "PNS47999_S1"
             ComponentClass = "PipingNetworkSegment"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704"
             DualFlow = "false">
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "SegmentNumberAssignmentClass"
-                    Value = "S1"
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SegmentNumberAssignmentClass"/>
-            </GenericAttributes>
             <PipingComponent
                 ID = "PNS47999_S1_C1"
                 ComponentName = "BlindFlangeShape1"
                 ComponentClass = "BlindFlange"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS414719">
-                <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "PipingComponentNumberAssignmentClass"
-                        Value = "C1"
-                        Format = "string"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/PipingComponentNumberAssignmentClass"/>
-                </GenericAttributes>
                 <Association Type = "is the location of" ItemID = "PIF0103_PSGF0103"/>
                 <ConnectionPoints NumPoints = "2">
                     <Node ID = "PNS47999_S1_C1_ND0"/>
@@ -83,7 +72,7 @@
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "InstrumentationLoopFunctionNumberAssignmentClass"
-                Value = "0103"
+                Value = "01"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
         </GenericAttributes>
@@ -91,8 +80,7 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PIF0103"
-        TagName = "L0103"
-        ComponentName = "ProcessInstrumentationFunctionShape1"
+        TagName = ""
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <ConnectionPoints NumPoints = "2">
@@ -104,7 +92,7 @@
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
-                Value = "L0103"
+                Value = "01"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
             <GenericAttribute
@@ -119,10 +107,10 @@
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
             <GenericAttribute
-                Name = "ProcessInstrumentationFunctionsAssignmentClass"
-                Value = "ICSA"
-                Format = "string"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionsAssignmentClass"/>
+                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Value = "I"
+                Format = "string"/>
         </GenericAttributes>
         <InformationFlow
             ID = "PIF0103_IF1"
@@ -142,13 +130,6 @@
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
             <Association Type = "is logical start of" ItemID = "PIF0103_IF1"/>
             <Association Type = "is located in" ItemID = "PNS47999_S1_C1"/>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "ProcessSignalGeneratingFunctionNumberAssignmentClass"
-                    Value = "LT0103 "
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunctionNumberAssignmentClass"/>
-            </GenericAttributes>
         </ProcessSignalGeneratingFunction>
     </ProcessInstrumentationFunction>
 </PlantModel>
