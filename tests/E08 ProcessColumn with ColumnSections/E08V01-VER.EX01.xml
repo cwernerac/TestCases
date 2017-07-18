@@ -83,16 +83,18 @@
             ID = "ColumnSection1"
             ComponentClass = "ColumnSection"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnSection">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "S1"
+                    Format = "string"/>
+            </GenericAttributes>
             <Equipment
                 ID = "CPA"
                 ComponentClass = "ColumnPackingsArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnPackingsArrangement">
-                <GenericAttributes Number = "2" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "SubTagNameAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                        Value = "S1"
-                        Format = "string"/>
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "PackingTypeAssignmentClass"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/PackingTypeAssignmentClass"
