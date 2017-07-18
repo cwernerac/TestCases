@@ -39,34 +39,32 @@
         </Nozzle>
     </Equipment>
     <PipingNetworkSystem
-        ID = "PNS47999"
+        ID = "PNS1"
         ComponentClass = "PipingNetworkSystem"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
         <PipingNetworkSegment
-            ID = "PNS47999_S1"
+            ID = "PNS1_S1"
             ComponentClass = "PipingNetworkSegment"
-            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704"
-            DualFlow = "false">
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
             <PipingComponent
-                ID = "PNS47999_S1_C1"
-                ComponentName = "BlindFlangeShape1"
+                ID = "PNS1_S1_C1"
                 ComponentClass = "BlindFlange"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS414719">
-                <Association Type = "is the location of" ItemID = "PIF0103_PSGF0103"/>
+                <Association Type = "is the location of" ItemID = "PIF01_PSGF01"/>
                 <ConnectionPoints NumPoints = "2">
-                    <Node ID = "PNS47999_S1_C1_ND0"/>
-                    <Node ID = "PNS47999_S1_C1_ND1" Type = "process"/>
+                    <Node ID = "PNS1_S1_C1_ND0"/>
+                    <Node ID = "PNS1_S1_C1_ND1" Type = "process"/>
                 </ConnectionPoints>
             </PipingComponent>
             <Connection
                 FromID = "T01_N3"
-                ToID = "PNS47999_S1_C1"
+                ToID = "PNS1_S1_C1"
                 ToNode = "1"/>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
-        ID = "ILF0103"
-        TagName = "0103"
+        ID = "ILF01"
+        TagName = "01"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -76,19 +74,19 @@
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
         </GenericAttributes>
-        <Association Type = "is a collection including" ItemID = "PIF0103"/>
+        <Association Type = "is a collection including" ItemID = "PIF01"/>
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
-        ID = "PIF0103"
+        ID = "PIF01"
         TagName = ""
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <ConnectionPoints NumPoints = "2">
-            <Node ID = "PIF0103_ND0"/>
-            <Node ID = "PIF0103_ND1" Type = "signal"/>
+            <Node ID = "PIF01_ND0"/>
+            <Node ID = "PIF01_ND1" Type = "signal"/>
         </ConnectionPoints>
-        <Association Type = "is logical end of" ItemID = "PIF0103_IF1"/>
-        <Association Type = "is a part of" ItemID = "ILF0103"/>
+        <Association Type = "is logical end of" ItemID = "PIF01_IF1"/>
+        <Association Type = "is a part of" ItemID = "ILF01"/>
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
@@ -113,23 +111,23 @@
                 Format = "string"/>
         </GenericAttributes>
         <InformationFlow
-            ID = "PIF0103_IF1"
+            ID = "PIF01_IF1"
             ComponentClass = "SignalConveyingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
-            <Association Type = "has logical end" ItemID = "PIF0103"/>
-            <Association Type = "has logical start" ItemID = "PIF0103_PSGF0103"/>
+            <Association Type = "has logical end" ItemID = "PIF01"/>
+            <Association Type = "has logical start" ItemID = "PIF01_PSGF01"/>
             <Connection
-                FromID = "PNS47999_S1_C1"
+                FromID = "PNS1_S1_C1"
                 FromNode = "2"
-                ToID = "PIF0103"
+                ToID = "PIF01"
                 ToNode = "1"/>
         </InformationFlow>
         <ProcessSignalGeneratingFunction
-            ID = "PIF0103_PSGF0103"
+            ID = "PIF01_PSGF01"
             ComponentClass = "ProcessSignalGeneratingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
-            <Association Type = "is logical start of" ItemID = "PIF0103_IF1"/>
-            <Association Type = "is located in" ItemID = "PNS47999_S1_C1"/>
+            <Association Type = "is logical start of" ItemID = "PIF01_IF1"/>
+            <Association Type = "is located in" ItemID = "PNS1_S1_C1"/>
         </ProcessSignalGeneratingFunction>
     </ProcessInstrumentationFunction>
 </PlantModel>
