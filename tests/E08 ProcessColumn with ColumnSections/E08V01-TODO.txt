@@ -1,5 +1,0 @@
-bei den SubTaggedColumnSection S1 fehlt der SubTagName
-
-bei ColumnPackingsArrangement fehlt Packing Tyoe 
-
-bei ColumnTraysArrangement fehlt numberOfTrays
