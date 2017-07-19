@@ -13,8 +13,8 @@
     <Equipment
         ID = "HeatExchanger5"
         TagName = "H-1009"
-        ComponentClass = "HeatExchanger"
-        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS304199">
+        ComponentClass = "PlateAndShellHeatExchanger"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS441719">
         <GenericAttributes Number = "2" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "TagNamePrefixAssignmentClass"
