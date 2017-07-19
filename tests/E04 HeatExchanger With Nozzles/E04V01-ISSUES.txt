@@ -1,0 +1,2 @@
+Graphics in E01V01.pptx is broken/inconsistent:
+- Label "N-2" is shown, but no corresponding Nozzle
