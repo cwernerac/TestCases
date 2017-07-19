@@ -58,7 +58,7 @@
             <GenericAttribute
                 Name = "TagNameSequenceNumberAssignmentClass"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                Value = "1001"
+                Value = "1009"
                 Format = "string"/>
         </GenericAttributes>
         <Nozzle
