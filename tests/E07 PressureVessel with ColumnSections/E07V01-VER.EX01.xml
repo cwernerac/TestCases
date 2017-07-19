@@ -15,6 +15,18 @@
         ComponentClass = "PressureVessel"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS427229"
         TagName = "PV321">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "PV"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "321"
+                Format = "string"/>
+        </GenericAttributes>        
         <Association Type = "is the location of" ItemID = "ColumnSection1"/>
         <Association Type = "is the location of" ItemID = "ColumnSection2"/>
         <Nozzle
@@ -87,6 +99,18 @@
         ComponentClass = "ColumnSection"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnSection"
         TagName = "S3211">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "S"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "3211"
+                Format = "string"/>
+        </GenericAttributes>             
         <Association Type = "is located in" ItemID = "PressureVessel321"/>
         <Equipment
             ID = "CPA"
@@ -106,6 +130,18 @@
         ComponentClass = "ColumnSection"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnSection"
         TagName = "S3212">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "S"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "3212"
+                Format = "string"/>
+        </GenericAttributes>     
         <Association Type = "is located in" ItemID = "PressureVessel321"/>
         <Equipment
             ID = "CTA"
