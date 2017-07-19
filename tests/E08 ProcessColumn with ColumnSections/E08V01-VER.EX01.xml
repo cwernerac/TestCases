@@ -15,6 +15,18 @@
         ComponentClass = "ProcessColumn"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS4316825224"
         TagName = "PC321">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "PC"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "321"
+                Format = "string"/>
+        </GenericAttributes>
         <Nozzle
             ID = "N-1"
             ComponentClass = "Nozzle"
