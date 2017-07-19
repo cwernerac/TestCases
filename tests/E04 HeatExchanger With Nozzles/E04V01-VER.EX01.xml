@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlantModel>
+    <PlantInformation
+        Date = "2017-07-11"
+        Discipline = "PID"
+        Is3D = "no"
+        OriginatingSystem = "DEXPI Test"
+        SchemaVersion = "4.0.1"
+        Time = "14:18:34"
+        Units = "mm">
+        <UnitsOfMeasure/>
+    </PlantInformation>
+    <Equipment
+        ID = "HeatExchanger5"
+        TagName = "H-1009"
+        ComponentClass = "PlateAndShellHeatExchanger"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS441719">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "H"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "1009"
+                Format = "string"/>
+        </GenericAttributes>
+        <Nozzle
+            ID = "H1009-N2"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1009-N2-N1"/>
+                <Node ID = "H1009-N2-N2" Type = "process"/>
+            </ConnectionPoints>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-2"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Nozzle>
+        <Nozzle
+            ID = "H1009-N3"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1009-N3-N1"/>
+                <Node ID = "H1009-N3-N2" Type = "process"/>
+            </ConnectionPoints>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-3"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Nozzle>
+        <Nozzle
+            ID = "H1009-N4"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1009-N4-N1"/>
+                <Node ID = "H1009-N4-N2" Type = "process"/>
+            </ConnectionPoints>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N-4"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Nozzle>
+    </Equipment>
+</PlantModel>

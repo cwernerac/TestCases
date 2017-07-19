@@ -15,6 +15,18 @@
         ComponentClass = "ProcessColumn"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS4316825224"
         TagName = "PC321">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "PC"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "321"
+                Format = "string"/>
+        </GenericAttributes>
         <Nozzle
             ID = "N-1"
             ComponentClass = "Nozzle"
@@ -94,7 +106,7 @@
                 ID = "CPA"
                 ComponentClass = "ColumnPackingsArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnPackingsArrangement">
-                <GenericAttributes Number = "1">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "PackingTypeAssignmentClass"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/PackingTypeAssignmentClass"
@@ -118,12 +130,7 @@
                 ID = "CTA"
                 ComponentClass = "ColumnTraysArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnTraysArrangement">
-                <GenericAttributes Number = "2">
-                    <GenericAttribute
-                        Name = "SubTagNameAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                        Value = "S2"
-                        Format = "string"/>
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "NumberOfTrays"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/NumberOfTrays"
