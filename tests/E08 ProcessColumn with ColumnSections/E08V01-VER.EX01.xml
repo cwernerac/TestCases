@@ -118,12 +118,7 @@
                 ID = "CTA"
                 ComponentClass = "ColumnTraysArrangement"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ColumnTraysArrangement">
-                <GenericAttributes Number = "2" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "SubTagNameAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                        Value = "S2"
-                        Format = "string"/>
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
                     <GenericAttribute
                         Name = "NumberOfTrays"
                         AttributeURI = "http://sandbox.dexpi.org/rdl/NumberOfTrays"
