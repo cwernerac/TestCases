@@ -98,7 +98,7 @@
             <GenericAttribute
                 Name = "TagNameSequenceNumberAssignmentClass"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                Value = "1001"
+                Value = "1009"
                 Format = "string"/>
         </GenericAttributes>
         <Nozzle
@@ -237,6 +237,7 @@
             ComponentClass = "PipingNetworkSegment"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
             <Connection ToID = "H1009-N1" FromID = "P4713-N2"/>
+            <CenterLine NumPoints = "0"/>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
 </PlantModel>
