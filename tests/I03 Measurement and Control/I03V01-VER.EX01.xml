@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlantModel>
+    <PlantInformation
+        SchemaVersion = "4.0.1"
+        OriginatingSystem = "DEXPI"
+        Date = "2016-08-31"
+        Time = "10:00:00+02:00"
+        Is3D = "no"
+        Units = "mm"
+        Discipline = "PID">
+        <UnitsOfMeasure/>
+    </PlantInformation>
+    <Equipment
+        ID = "T01"
+        ComponentClass = "Tank"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS445139">
+        <Nozzle
+            ID = "T01_N3"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "T01_N3_ND0"/>
+                <Node ID = "T01_N3_ND1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+    </Equipment>
+    <PipingNetworkSystem
+        ID = "PNSystem"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNSegment_A"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <PipingComponent
+                ID = "PC_BlindFlange"
+                ComponentClass = "BlindFlange"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS414719">
+                <Association Type = "is the location of" ItemID = "PSGF_LISCA03"/>
+                <ConnectionPoints NumPoints = "3">
+                    <Node ID = "PC_BF_ND0"/>
+                    <Node ID = "PC_BF_ND1" Type = "process"/>
+                    <Node ID = "PC_BF_ND2" Type = "signal"/>
+                </ConnectionPoints>
+            </PipingComponent>
+            <Connection
+                FromID = "T01_N3"
+                ToID = "PC_BlindFlange"
+                ToNode = "1"/>
+        </PipingNetworkSegment>
+        <PipingNetworkSegment
+            ID = "PNSegment_B"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Association Type = "is the location of" ItemID = "PIF_LISCA03_AF"/>
+            <PipingComponent
+                ID = "PC_ShutOffValve"
+                TagName = "LV 03"
+                ComponentClass = "ShutOffValve"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <Association Type = "is referenced by" ItemID = "LISCA03_ASC"/>
+            </PipingComponent>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <InstrumentationLoopFunction
+        ID = "ILF_LISCA03"
+        TagName = "03"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <Association Type = "is a collection including" ItemID = "PIF_LISCA03"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "PIF_LISCA03"
+        TagName = "LISCA"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <ConnectionPoints NumPoints = "2">
+            <Node ID = "PIF_LISCA03_ND0"/>
+            <Node ID = "PIF_LISCA03_ND1" Type = "signal"/>
+        </ConnectionPoints>
+        <Association Type = "is a part of" ItemID = "ILF_LISCA03"/>
+        <Association Type = "is logical end of" ItemID = "PIF_LISCA03_IFlow_to"/>
+        <Association Type = "is logical start of" ItemID = "PIF_LISCA03_IFlow_from"/>
+        <ActuatingFunction
+            ID = "PIF_LISCA03_AF"
+            ComponentClass = "ActuatingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingFunction">
+            <Association Type = "is located in" ItemID = "PNSegment_A"/>
+            <Association Type = "is logical end of" ItemID = "PIF_LISCA03_IFlow_from"/>
+            <Association Type = "is fulfilled by" ItemID = "PIF_LISCA03_AS"/>
+        </ActuatingFunction>
+        <InformationFlow
+            ID = "PIF_LISCA03_IFlow_to"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "PSGF_LISCA03"/>
+            <Association Type = "has logical end" ItemID = "PIF_LISCA03"/>
+            <Connection
+                FromID = "PC"
+                FromNode = "2"
+                ToID = "PIF_LISCA03"
+                ToNode = "1"/>
+        </InformationFlow>
+        <InformationFlow
+            ID = "PIF_LISCA03_IFlow_from"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "PIF_LISCA03"/>
+            <Association Type = "has logical end" ItemID = "PIF_LISCA03_AF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "PSGF_LISCA03"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+            <Association Type = "is logical start of" ItemID = "PIF_LISCA03_IFlow_to"/>
+            <Association Type = "is located in" ItemID = "PC_BlindFlange"/>
+        </ProcessSignalGeneratingFunction>
+    </ProcessInstrumentationFunction>
+    <ActuatingSystem
+        ID = "LISCA03_AS"
+        ComponentClass = "ActuatingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingSystem">
+        <Association Type = "fulfills" ItemID = "PIF_LISCA03_AF"/>
+        <ActuatingSystemComponent
+            ID = "LISCA03_ASC"
+            ComponentClass = "ShutOffValveReference"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <Association Type = "refers to" ItemID = "PC_ShutOffValve"/>
+        </ActuatingSystemComponent>
+    </ActuatingSystem>
+</PlantModel>

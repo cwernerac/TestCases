@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlantModel>
+    <PlantInformation
+        Date = "2017-03-28"
+        Discipline = "PID"
+        Is3D = "no"
+        OriginatingSystem = "DEXPI Test"
+        SchemaVersion = "4.0.1"
+        Time = "11:47:00"
+        Units = "mm">
+        <UnitsOfMeasure/>
+    </PlantInformation>
+    <Extent>
+        <Min X = "0" Y = "0"/>
+        <Max X = "800" Y = "600"/>
+    </Extent>
+    <InstrumentationLoopFunction
+        ID = "ILF"
+        TagName = "H-02"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <Association Type = "is a collection including" ItemID = "PIF"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "PIF"
+        TagName = "HC 02"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <Association Type = "is a part of" ItemID = "ILF"/>
+        <Association Type = "is logical start of" ItemID = "IFlow"/>
+        <ActuatingFunction
+            ID = "AF"
+            ComponentClass = "ActuatingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingFunction">
+            <Association Type = "is located in" ItemID = "PNSegment"/>
+            <Association Type = "is logical end of" ItemID = "IFlow"/>
+            <Association Type = "is fulfilled by" ItemID = "AS"/>
+        </ActuatingFunction>
+        <InformationFlow
+            ID = "IFlow"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "PIF"/>
+            <Association Type = "has logical end" ItemID = "AF"/>
+        </InformationFlow>
+    </ProcessInstrumentationFunction>
+    <ActuatingSystem
+        ID = "AS"
+        ComponentClass = "ActuatingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingSystem">
+        <Association Type = "fulfills" ItemID = "AF"/>
+        <ActuatingSystemComponent
+            ID = "ASC"
+            ComponentClass = "ShutOffValveReference"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <Association Type = "refers to" ItemID = "PC"/>
+        </ActuatingSystemComponent>
+        <ActuatingSystemComponent
+            ID = "ASC1"
+            ComponentClass = "ControlledActuator"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
+        </ActuatingSystemComponent>
+    </ActuatingSystem>
+    <PipingNetworkSystem
+        ID = "PNSystem"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNSegment"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Association Type = "is the location of" ItemID = "AF"/>
+            <PipingComponent
+                ID = "PC"
+                TagName = "HV 02"
+                ComponentClass = "ShutOffValve"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <Association Type = "is referenced by" ItemID = "ASC"/>
+            </PipingComponent>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+</PlantModel>

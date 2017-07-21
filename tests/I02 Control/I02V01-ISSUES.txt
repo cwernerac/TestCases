@@ -1,0 +1,1 @@
+Die ActuatingSystemComponent "ControlledActuator" ist nicht enthalten. Notwendig? 
