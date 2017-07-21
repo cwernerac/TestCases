@@ -1,1 +1,3 @@
-Brauchen wir den BlindFlange?
+* PipingComponents haben keine Nodes; deshalb kann keine CenterLine von der PC LV03 angegeben werden. Notwendig?
+* Sind die GenericAttributes wie TagNamePrefixAssignmentClass beim ShutOffValve richtig?
+* Zwei verschiedene PipingNetworkSystems?

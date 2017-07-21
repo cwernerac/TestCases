@@ -1,1 +1,3 @@
-Die ActuatingSystemComponent "ControlledActuator" ist nicht enthalten. Notwendig? 
+* Die ActuatingSystemComponent "ControlledActuator" ist enthalten. Hier notwendig?
+* PipingComponents haben keine Nodes; deshalb kann keine CenterLine von der PC HV02 angegeben werden. Notwendig?
+* Sind die GenericAttributes wie TagNamePrefixAssignmentClass beim ShutOffValve richtig?

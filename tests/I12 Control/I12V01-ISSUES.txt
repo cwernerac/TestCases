@@ -1,0 +1,1 @@
+* Welche Associations bekommt der Positioner im ActuatingSystem?

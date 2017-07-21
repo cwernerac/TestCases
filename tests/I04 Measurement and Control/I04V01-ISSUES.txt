@@ -1,0 +1,3 @@
+* check generic attributes of tube and valve
+* check dual flow attribute of pip net segment; dual flow = false sufficient?
+* check attributes of conrolled actuator
