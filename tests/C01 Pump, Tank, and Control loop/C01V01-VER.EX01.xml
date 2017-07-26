@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlantModel>
+    <PlantInformation
+        Date = "2016-12-31"
+        Discipline = "PID"
+        Is3D = "no"
+        OriginatingSystem = "DEXPI Test"
+        SchemaVersion = "4.0.1"
+        Time = "23:59:59"
+        Units = "mm">
+        <UnitsOfMeasure/>
+    </PlantInformation>
+    <Equipment
+        ID = "TA-01"
+        TagName = "TA-113"
+        ComponentClass = "Vessel"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS414674">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "TA"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "113"
+                Format = "string"/>
+        </GenericAttributes>
+        <Equipment
+            ID = "TA-01-Chamber-1"
+            ComponentClass = "Chamber"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+        </Equipment>
+        <Equipment
+            ID = "TA-01-Chamber-2"
+            ComponentClass = "Chamber"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+        </Equipment>
+        <Equipment
+            ID = "TA-01-Chamber-3"
+            ComponentClass = "Chamber"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+        </Equipment>
+        <Nozzle
+            ID = "TA-01-N-1"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "TA-01-N-1-N0"/>
+                <Node ID = "TA-01-N-1-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+        <Nozzle
+            ID = "TA-01-N-2"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "TA-01-N-2-N0"/>
+                <Node ID = "TA-01-N-2-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+        <Nozzle
+            ID = "TA-01-N-3"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "TA-01-N-3-N0"/>
+                <Node ID = "TA-01-N-3-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+        <Nozzle
+            ID = "TA-01-N-4"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "TA-01-N-4-N0"/>
+                <Node ID = "TA-01-N-4-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+    </Equipment>
+    <Equipment
+        ID = "PU-112"
+        TagName = "PU-112"
+        ComponentClass="SpecialPump"
+        ComponentClassURI="http://sandbox.dexpi.org/rdl/SpecialPump">
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "PU"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "112"
+                Format = "string"/>
+        </GenericAttributes>       
+        <Nozzle
+            ID = "PU-112-N-1"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "PU-112-N-1-N0"/>
+                <Node ID = "PU-112-N-1-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+        <Nozzle
+            ID = "PU-112-N-2"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "PU-112-N-2-N0"/>
+                <Node ID = "PU-112-N-2-N1" Type = "process"/>
+            </ConnectionPoints>
+        </Nozzle>
+    </Equipment>
+    <PipingNetworkSystem
+        ID = "PNS-1"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-1-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <PipeConnectorSymbol
+                ID = "FlowIn-S1"
+                ComponentClass = "FlowInPipeConnectorSymbol"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/FlowInPipeConnectorSymbol">
+                <ConnectionPoints NumPoints = "2" FlowOut = "1">
+                    <Node ID = "FlowIn-S1-N0"/>
+                    <Node ID = "FlowIn-S1-N1" Type = "process"/>
+                </ConnectionPoints>
+            </PipeConnectorSymbol>            
+            <CenterLine NumPoints = "0"/>
+            <Connection
+                FromID = "FlowIn-S1"
+                ToID = "PU-112-N-1"/>
+        </PipingNetworkSegment>        
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-2"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-2-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <CenterLine NumPoints = "0"/>
+            <Connection
+                FromID = "PU-112-N-2"
+                ToID = "TA-01-N-1"/>
+        </PipingNetworkSegment>        
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-3"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-3-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-3-S1-C1"
+                ComponentClass = "PipeReducer"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416294">
+                <ConnectionPoints
+                    NumPoints = "3"
+                    FlowIn = "1"
+                    FlowOut = "2">
+                    <Node ID = "PNS-3-S1-C1-N0"/>
+                    <Node ID = "PNS-3-S1-C1-N1" Type = "process"/>
+                    <Node ID = "PNS-3-S1-C1-N2" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>
+            <Connection
+                FromID = "TA-01-N-2"
+                ToID = "PNS-3-S1-C1" ToNode = "2"/>
+        </PipingNetworkSegment>
+        <PipingNetworkSegment
+            ID = "PNS-3-S2"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-3-S2-C1"
+                ComponentClass = "BallValve"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
+                    <Node ID = "PNS-3-S2-C1-N0"/>
+                    <Node ID = "PNS-3-S2-C1-N1" Type = "process"/>
+                    <Node ID = "PNS-3-S2-C1-N2" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>
+            <CenterLine NumPoints = "0"/>
+            <PipeConnectorSymbol
+                ID = "FlowOut-PNS-3"
+                ComponentClass = "FlowOutPipeConnectorSymbol"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/FlowOutPipeConnectorSymbol">
+                <ConnectionPoints NumPoints = "2" FlowIn = "1">
+                    <Node ID = "FlowOut-PNS-3-N0"/>
+                    <Node ID = "FlowOut-PNS-3-N1" Type = "process"/>
+                </ConnectionPoints>
+            </PipeConnectorSymbol>                        
+            <Connection
+                FromID = "PNS-3-S1-C1" FromNode = "2"
+                ToID = "FlowOut-PNS-3" ToNode = "1"/>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-4"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-4-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-4-S1-C1"
+                ComponentClass = "BallValve"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <ConnectionPoints NumPoints = "2" FlowIn = "1">
+                    <Node ID = "PNS-4-S1-C1-N0"/>
+                    <Node ID = "PNS-4-S1-C1-N1" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>
+            <Connection
+                FromID = "TA-01-N-3" FromNode = "1"
+                ToID = "PNS-4-S1-C1" ToNode = "1"/>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-5"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-5-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-5-S1-C1"
+                ComponentClass = "BallValve"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <ConnectionPoints NumPoints = "2" FlowIn = "1">
+                    <Node ID = "PNS-5-S1-C1-N0"/>
+                    <Node ID = "PNS-5-S1-C1-N1" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>
+            <Connection
+                FromID = "TA-01-N-4" FromNode = "1"
+                ToID = "PNS-5-S1-C1" ToNode = "1"/>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+</PlantModel>
