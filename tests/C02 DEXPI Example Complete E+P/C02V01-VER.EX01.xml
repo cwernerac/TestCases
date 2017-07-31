@@ -1831,5 +1831,185 @@
                 </ConnectionPoints>
             </PipeConnectorSymbol>            
         </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-47127"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <GenericAttributes Number = "7" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "FluidCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass"
+                Value = "MNc"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "LineNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LineNumberAssignmentClass"
+                Value = "47127"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "PipingClassCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/PipingClassCodeAssignmentClass"
+                Value = "75HB13"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterNumericalValueRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterNumericalValueRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterStandardSpecialization"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterStandardSpecialization"
+                Value = "Din2448ObjectDn50"
+                ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn50"
+                Format = "anyURI"/>
+            <GenericAttribute
+                Name = "NominalDiameterTypeRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
+                Value = ""
+                Format = "string"/>
+        </GenericAttributes>
+        <PipingNetworkSegment
+            ID = "PNS-47127-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Connection
+                FromID = "H1008-N2"
+                FromNode = "1"
+                ToID = "T4750-N6"
+                ToNode = "1"/>
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-47127-S1-C1"
+                ComponentClass = "ShutOffValve"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
+                    <Node ID = "PNS-47127-S1-C1-N0"/>
+                    <Node ID = "PNS-47127-S1-C1-N1" Type = "process"/>
+                    <Node ID = "PNS-47127-S1-C1-N2" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>            
+            <CenterLine NumPoints = "0"/>
+        </PipingNetworkSegment>        
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-47140"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <GenericAttributes Number = "7" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "FluidCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass"
+                Value = "QSa"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "LineNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LineNumberAssignmentClass"
+                Value = "47141"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "PipingClassCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/PipingClassCodeAssignmentClass"
+                Value = "75HB13"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterNumericalValueRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterNumericalValueRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterStandardSpecialization"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterStandardSpecialization"
+                Value = "Din2448ObjectDn50"
+                ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn50"
+                Format = "anyURI"/>
+            <GenericAttribute
+                Name = "NominalDiameterTypeRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
+                Value = ""
+                Format = "string"/>
+        </GenericAttributes>        
+        <PipingNetworkSegment
+            ID = "PNS-47140-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Connection
+                ToID = "H1008-N4"
+                ToNode = "1"/>
+            <CenterLine NumPoints = "0"/>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-47141"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <GenericAttributes Number = "7" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "FluidCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass"
+                Value = "QSb"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "LineNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LineNumberAssignmentClass"
+                Value = "47141"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "PipingClassCodeAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/PipingClassCodeAssignmentClass"
+                Value = "75HB13"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterNumericalValueRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterNumericalValueRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
+                Value = "50"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "NominalDiameterStandardSpecialization"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterStandardSpecialization"
+                Value = "Din2448ObjectDn50"
+                ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn50"
+                Format = "anyURI"/>
+            <GenericAttribute
+                Name = "NominalDiameterTypeRepresentationAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
+                Value = ""
+                Format = "string"/>
+        </GenericAttributes>
+        <PipingNetworkSegment
+            ID = "PNS-47141-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Connection
+                ToID = "H1008-N3"
+                ToNode = "1"/>
+            <CenterLine NumPoints = "0"/>
+            <PipingComponent
+                ID = "PNS-47141-S1-C1"
+                ComponentClass = "ShutOffValve"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
+                    <Node ID = "PNS-47141-S1-C1-N0"/>
+                    <Node ID = "PNS-47141-S1-C1-N1" Type = "process"/>
+                    <Node ID = "PNS-47141-S1-C1-N2" Type = "process"/>
+                </ConnectionPoints>
+            </PipingComponent>            
+            <CenterLine NumPoints = "0"/>
+        </PipingNetworkSegment>        
     </PipingNetworkSystem>    
 </PlantModel>
