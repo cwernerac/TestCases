@@ -1270,6 +1270,13 @@
                 ID = "PNS-47124-S1-C1"
                 ComponentClass = "SwingCheckValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS610424">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="66KL21"
+                        Format="string"/>                
+                </GenericAttributes>
                 <ConnectionPoints
                     NumPoints = "3"
                     FlowIn = "1"
@@ -1332,6 +1339,13 @@
                 ID = "PNS-47124-S1-C2"
                 ComponentClass = "SwingCheckValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS610424">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="75SA21"
+                        Format="string"/>                
+                </GenericAttributes>                
                 <ConnectionPoints
                     NumPoints = "3"
                     FlowIn = "1"
@@ -1482,7 +1496,14 @@
             <PipingComponent
                 ID = "PNS-47124-S3-C1"
                 ComponentClass = "BallValve"
-                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">                
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="73KH12"
+                        Format="string"/>                
+                </GenericAttributes>
                 <ConnectionPoints
                     NumPoints = "3"
                     FlowIn = "1"
@@ -1898,6 +1919,13 @@
                 ID = "PNS-47126-S2-C1"
                 ComponentClass = "BallValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="73KH12"
+                        Format="string"/>                
+                </GenericAttributes>                
                 <ConnectionPoints NumPoints = "3" FlowIn = "1">
                     <Node ID = "PNS-47126-S2-C1-N0"/>
                     <Node ID = "PNS-47126-S2-C1-N1" Type = "process">
@@ -2161,6 +2189,13 @@
                 ID = "PNS-47126-S5-C1"
                 ComponentClass = "BallValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="73KH12"
+                        Format="string"/>                
+                </GenericAttributes>                
                 <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut="2">
                     <Node ID = "PNS-47126-S5-C1-N0"/>
                     <Node ID = "PNS-47126-S5-C1-N1" Type = "process">
@@ -2265,6 +2300,13 @@
                 ID = "PNS-47126-S6-C1"
                 ComponentClass = "BallValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="73KH12"
+                        Format="string"/>                
+                </GenericAttributes>                
                 <ConnectionPoints
                     NumPoints = "3"
                     FlowIn = "1"
@@ -2532,6 +2574,13 @@
                 ID = "PNS-47126-S9-C1"
                 ComponentClass = "BallValve"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                    <GenericAttribute
+                        Name="PipingComponentNameAssignmentClass"
+                        AttributeURI="http://sandbox.dexpi.org/rdl/PipingComponentNameAssignmentClass"
+                        Value="73KH12"
+                        Format="string"/>                
+                </GenericAttributes>
                 <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
                     <Node ID = "PNS-47126-S9-C1-N0"/>
                     <Node ID = "PNS-47126-S9-C1-N1" Type = "process">
@@ -3102,13 +3151,13 @@
     </ProcessInstrumentationFunction>    
     <InstrumentationLoopFunction
         ID = "PI4750.01_ILF"
-        TagName = "4750.1"
+        TagName = "4750.01"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "InstrumentationLoopFunctionNumberAssignmentClass"
-                Value = "4750.1"
+                Value = "4750.01"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
         </GenericAttributes>
@@ -3202,13 +3251,13 @@
     </ActuatingSystem>
     <InstrumentationLoopFunction
         ID = "TICSA_4750.03.02_ILF"
-        TagName = "4750.02"
+        TagName = "4750.03"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "InstrumentationLoopFunctionNumberAssignmentClass"
-                Value = "4750.02"
+                Value = "4750.03"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
         </GenericAttributes>
@@ -3216,13 +3265,13 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "TICSA_4750.03.02_PIF"
-        TagName = "4750.02"
+        TagName = "4750.03"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
-                Value = "4750.02"
+                Value = "4750.03"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
             <GenericAttribute
@@ -3269,6 +3318,13 @@
             ID = "TICSA_4750.03.02_PIF_ASC_A"
             ComponentClass = "ShutOffValveReference"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">            
+                <GenericAttribute
+                    Name="SubTagNameAssignmentClass"
+                    AttributeURI="http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value="TV4750.03"
+                    Format="string"/>            
+            </GenericAttributes>
             <Association Type = "refers to" ItemID = "PNS-47503-S1-C1"/>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
