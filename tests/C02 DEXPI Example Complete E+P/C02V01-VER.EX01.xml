@@ -507,6 +507,7 @@
             ID = "T4750-N7"
             ComponentClass = "Nozzle"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <Association Type = "is the location of" ItemID = "TI4750.03_PSGF"/>
             <ConnectionPoints NumPoints = "2">
                 <Node ID = "T4750-N7-N1"/>
                 <Node ID = "T4750-N7-N2" Type = "process">
@@ -2640,7 +2641,7 @@
                 ID = "PNS-47126-S9-C2"
                 ComponentClass="Flange"
                 ComponentClassURI="http://data.posccaesar.org/rdl/RDS13307654">
-                <Association Type = "is the location of" ItemID = "PI4712.02_PSGF"/>                
+                <Association Type = "is the location of" ItemID = "PI4712.01_PSGF"/>
                 <ConnectionPoints NumPoints = "2" FlowIn = "1">
                     <Node ID = "PNS-47126-S9-C2-N0"/>
                     <Node ID = "PNS-47126-S9-C2-N1" Type = "process">
@@ -2669,8 +2670,7 @@
                         </GenericAttributes>
                     </Node>
                 </ConnectionPoints>                
-            </PipingComponent>
-            
+            </PipingComponent>            
         </PipingNetworkSegment>        
         <PipingNetworkSegment
             ID = "PNS-47126-S10"
@@ -2787,6 +2787,7 @@
                 ID = "PNS-47127-S1-C1"
                 ComponentClass = "ShutOffValve"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <Association Type = "is referenced by" ItemID = "PI4712.02_PIF_ASC_A"/>
                 <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
                     <Node ID = "PNS-47127-S1-C1-N0"/>
                     <Node ID = "PNS-47127-S1-C1-N1" Type = "process">
@@ -2974,6 +2975,7 @@
                 ID = "PNS-47141-S1-C1"
                 ComponentClass = "ShutOffValve"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <Association Type = "is referenced by" ItemID = "PI4750.03_PIF_ASC_A"/>
                 <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
                     <Node ID = "PNS-47141-S1-C1-N0"/>
                     <Node ID = "PNS-47141-S1-C1-N1" Type = "process">
@@ -3068,8 +3070,8 @@
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
             <GenericAttribute
-                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Name = "ProcessInstrumentationFunctionsAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionsAssignmentClass"
                 Value = "I"
                 Format = "string"/>
         </GenericAttributes>
@@ -3087,11 +3089,11 @@
             ComponentClass = "ProcessSignalGeneratingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
             <Association Type = "is logical start of" ItemID = "PI4712.01_PIF_IFlow"/>
-            <Association Type = "is located in" ItemID = "PNS-47126-S5-C2"/>
+            <Association Type = "is located in" ItemID = "PNS-47126-S9-C2"/>
         </ProcessSignalGeneratingFunction>
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
-        ID = "PI4712.02_ILF"
+        ID = "PI_4712.02_ILF"
         TagName = "4712.02"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
@@ -3106,7 +3108,7 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PI4712.02_PIF"
-        TagName = "LI"
+        TagName = "PI_4712.02"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -3127,13 +3129,22 @@
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
             <GenericAttribute
-                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Name = "ProcessInstrumentationFunctionsAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionsAssignmentClass"
                 Value = "ICSA"
                 Format = "string"/>
         </GenericAttributes>
-        <Association Type = "is a part of" ItemID = "PI4712.02_ILF"/>
+        <Association Type = "is a part of" ItemID = "PI_4712.02_ILF"/>
+        <Association Type = "is logical start of" ItemID = "PI4712.02_PIF_IFlow2"/>
         <Association Type = "is logical end of" ItemID = "PI4712.02_PIF_IFlow"/>
+        <ActuatingFunction
+            ID = "PI4712.02_PIF_AF"
+            ComponentClass = "ActuatingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingFunction">
+            <Association Type = "is located in" ItemID = "PNSegment"/>
+            <Association Type = "is logical end of" ItemID = "PI4712.02_PIF_IFlow2"/>
+            <Association Type = "is fulfilled by" ItemID = "PI4712.02_PIF_AS"/>
+        </ActuatingFunction>        
         <InformationFlow
             ID = "PI4712.02_PIF_IFlow"
             ComponentClass = "SignalConveyingFunction"
@@ -3141,14 +3152,68 @@
             <Association Type = "has logical end" ItemID = "PI4712.02_PIF"/>
             <Association Type = "has logical start" ItemID = "PI4712.02_PSGF"/>
         </InformationFlow>
+        <InformationFlow
+            ID = "PI4712.02_PIF_IFlow2"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical end" ItemID = "PI4712.02_PIF_AF"/>
+            <Association Type = "has logical start" ItemID = "PI4712.02_PIF"/>
+        </InformationFlow>
         <ProcessSignalGeneratingFunction
             ID = "PI4712.02_PSGF"
             ComponentClass = "ProcessSignalGeneratingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
             <Association Type = "is logical start of" ItemID = "PI4712.02_PIF_IFlow"/>
-            <Association Type = "is located in" ItemID = "PNS-47126-S9-C2"/>
+            <Association Type = "is located in" ItemID = "PNS-47126-S5-C2"/>
         </ProcessSignalGeneratingFunction>
-    </ProcessInstrumentationFunction>    
+    </ProcessInstrumentationFunction>
+    <ActuatingSystem
+        ID = "PI4712.02_PIF_AS"
+        ComponentClass = "ActuatingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingSystem">
+        <Association Type = "fulfills" ItemID = "PI4712.02_PIF_AF"/>
+        <ActuatingSystemComponent
+            ID = "PI4712.02_PIF_ASC_A"
+            ComponentClass = "ShutOffValveReference"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <Association Type = "refers to" ItemID = "PNS-47127-S1-C1"/>            
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    Value = "PV 4712.02"
+                    Format = "string"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
+            </GenericAttributes>
+        </ActuatingSystemComponent>
+        <ActuatingSystemComponent
+            ID = "PI4712.02_PIF_ASC_B"
+            ComponentClass = "ControlledActuator"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
+            <GenericAttributes Number = "4" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "DeviceTypeNameAssignmentClass"
+                    Value = ""
+                    Format = "string"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/DeviceTypeNameAssignmentClass"/>
+                <GenericAttribute
+                    Name = "FailActionRepresentationAssignmentClass"
+                    Value = "F.C."
+                    Format = "string"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionRepresentationAssignmentClass"/>
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    Value = ""
+                    Format = "string"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
+                <GenericAttribute
+                    Name = "FailActionSpecialization"
+                    Value = "FailClose"
+                    ValueURI = "http://data.posccaesar.org/rdl/RDS5921400"
+                    Format = "anyURI"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"/>
+            </GenericAttributes>
+        </ActuatingSystemComponent>
+    </ActuatingSystem>    
     <InstrumentationLoopFunction
         ID = "PI4750.01_ILF"
         TagName = "4750.01"
@@ -3250,7 +3315,7 @@
         </ActuatingSystemComponent>
     </ActuatingSystem>
     <InstrumentationLoopFunction
-        ID = "TICSA_4750.03.02_ILF"
+        ID = "PI_4750.03_ILF"
         TagName = "4750.03"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
@@ -3261,11 +3326,11 @@
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
         </GenericAttributes>
-        <Association Type = "is a collection including" ItemID = "TICSA_4750.03.01_PIF"/>
+        <Association Type = "is a collection including" ItemID = "TI4750.03_PIF"/>
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
-        ID = "TICSA_4750.03.02_PIF"
-        TagName = "4750.03"
+        ID = "TI4750.03_PIF"
+        TagName = "PI_4750.03"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -3282,53 +3347,68 @@
                 AttributeURI = "http://sandbox.dexpi.org/rdl/LocationSpecialization"/>
             <GenericAttribute
                 Name = "ProcessInstrumentationFunctionCategoryAssignmentClass"
-                Value = "P"
+                Value = "T"
                 Format = "string"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
             <GenericAttribute
-                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Name = "ProcessInstrumentationFunctionsAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionsAssignmentClass"
                 Value = "ICSA"
                 Format = "string"/>
         </GenericAttributes>
-        <Association Type = "is a part of" ItemID = "TICSA_4750.03.02_ILF"/>
-        <Association Type = "is logical start of" ItemID = "TICSA_4750.03.02_PIF_IFlow"/>
+        <Association Type = "is a part of" ItemID = "PI_4750.03_ILF"/>
+        <Association Type = "is logical start of" ItemID = "TI4750.03_PIF_IFlow2"/>
+        <Association Type = "is logical end of" ItemID = "TI4750.03_PIF_IFlow"/>
         <ActuatingFunction
-            ID = "TICSA_4750.03.02_PIF_AF"
+            ID = "TI4750.03_PIF_AF"
             ComponentClass = "ActuatingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingFunction">
             <Association Type = "is located in" ItemID = "PNSegment"/>
-            <Association Type = "is logical end of" ItemID = "TICSA_4750.03.02_PIF_IFlow"/>
-            <Association Type = "is fulfilled by" ItemID = "TICSA_4750.03.02_PIF_AS"/>
-        </ActuatingFunction>
+            <Association Type = "is logical end of" ItemID = "TI4750.03_PIF_IFlow2"/>
+            <Association Type = "is fulfilled by" ItemID = "TI4750.03_PIF_AS"/>
+        </ActuatingFunction>        
         <InformationFlow
-            ID = "TICSA_4750.03.02_PIF_IFlow"
+            ID = "TI4750.03_PIF_IFlow"
             ComponentClass = "SignalConveyingFunction"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
-            <Association Type = "has logical start" ItemID = "TICSA_4750.03.02_PIF"/>
-            <Association Type = "has logical end" ItemID = "TICSA_4750.03.02_PIF_AF"/>
+            <Association Type = "has logical end" ItemID = "TI4750.03_PIF"/>
+            <Association Type = "has logical start" ItemID = "TI4750.03_PSGF"/>
         </InformationFlow>
+        <InformationFlow
+            ID = "TI4750.03_PIF_IFlow2"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical end" ItemID = "TI4750.03_PIF_AF"/>
+            <Association Type = "has logical start" ItemID = "TI4750.03_PIF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "TI4750.03_PSGF"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+            <Association Type = "is logical start of" ItemID = "TI4750.03_PIF_IFlow"/>
+            <Association Type = "is located in" ItemID = "PNS-47126-S5-C2"/>
+        </ProcessSignalGeneratingFunction>
     </ProcessInstrumentationFunction>
     <ActuatingSystem
-        ID = "TICSA_4750.03.02_PIF_AS"
+        ID = "TI4750.03_PIF_AS"
         ComponentClass = "ActuatingSystem"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingSystem">
-        <Association Type = "fulfills" ItemID = "TICSA_4750.03.02_PIF_AF"/>
+        <Association Type = "fulfills" ItemID = "TI4750.03_PIF_AF"/>
         <ActuatingSystemComponent
-            ID = "TICSA_4750.03.02_PIF_ASC_A"
+            ID = "TI4750.03_PIF_ASC_A"
             ComponentClass = "ShutOffValveReference"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">            
+            <Association Type = "refers to" ItemID = "PNS-47141-S1-C1"/>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
                 <GenericAttribute
-                    Name="SubTagNameAssignmentClass"
-                    AttributeURI="http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value="TV4750.03"
-                    Format="string"/>            
+                    Name = "SubTagNameAssignmentClass"
+                    Value = "TV 4750.03"
+                    Format = "string"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
             </GenericAttributes>
-            <Association Type = "refers to" ItemID = "PNS-47503-S1-C1"/>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
-            ID = "TICSA_4750.03.02_PIF_ASC_B"
+            ID = "TI4750.03_PIF_ASC_B"
             ComponentClass = "ControlledActuator"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
             <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -3355,5 +3435,5 @@
                     AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"/>
             </GenericAttributes>
         </ActuatingSystemComponent>
-    </ActuatingSystem>    
+    </ActuatingSystem> 
 </PlantModel>
