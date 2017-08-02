@@ -24,7 +24,6 @@
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "PI044_ILF"
-        TagName = "044"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -38,7 +37,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PI044_PIF"
-        TagName = "PI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -83,7 +81,6 @@
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
         ID = "PI045_ILF"
-        TagName = "045"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -97,7 +94,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PI045_PIF"
-        TagName = "PI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -142,7 +138,6 @@
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
         ID = "US046_ILF"
-        TagName = "046"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -156,7 +151,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "US046_PIF"
-        TagName = "US"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -193,7 +187,6 @@
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
         ID = "US047_ILF"
-        TagName = "047"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -207,7 +200,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "US047_PIF"
-        TagName = "US"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">

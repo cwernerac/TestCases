@@ -35,7 +35,6 @@
     </Equipment>
     <InstrumentationLoopFunction
         ID = "LI09_ILF"
-        TagName = "09"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -49,7 +48,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "LI09_PIF"
-        TagName = "LI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">

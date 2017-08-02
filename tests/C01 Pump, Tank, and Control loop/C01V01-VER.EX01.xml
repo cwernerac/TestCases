@@ -82,8 +82,8 @@
     <Equipment
         ID = "PU-112"
         TagName = "PU-112"
-        ComponentClass="SpecialPump"
-        ComponentClassURI="http://sandbox.dexpi.org/rdl/SpecialPump">
+        ComponentClass = "SpecialPump"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/SpecialPump">
         <GenericAttributes Number = "2" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "TagNamePrefixAssignmentClass"
@@ -95,7 +95,7 @@
                 AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
                 Value = "112"
                 Format = "string"/>
-        </GenericAttributes>       
+        </GenericAttributes>
         <Nozzle
             ID = "PU-112-N-1"
             ComponentClass = "Nozzle"
@@ -131,12 +131,10 @@
                     <Node ID = "FlowIn-S1-N0"/>
                     <Node ID = "FlowIn-S1-N1" Type = "process"/>
                 </ConnectionPoints>
-            </PipeConnectorSymbol>            
+            </PipeConnectorSymbol>
             <CenterLine NumPoints = "0"/>
-            <Connection
-                FromID = "FlowIn-S1"
-                ToID = "PU-112-N-1"/>
-        </PipingNetworkSegment>        
+            <Connection FromID = "FlowIn-S1" ToID = "PU-112-N-1"/>
+        </PipingNetworkSegment>
     </PipingNetworkSystem>
     <PipingNetworkSystem
         ID = "PNS-2"
@@ -147,10 +145,8 @@
             ComponentClass = "PipingNetworkSegment"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
             <CenterLine NumPoints = "0"/>
-            <Connection
-                FromID = "PU-112-N-2"
-                ToID = "TA-01-N-1"/>
-        </PipingNetworkSegment>        
+            <Connection FromID = "PU-112-N-2" ToID = "TA-01-N-1"/>
+        </PipingNetworkSegment>
     </PipingNetworkSystem>
     <PipingNetworkSystem
         ID = "PNS-3"
@@ -176,7 +172,8 @@
             </PipingComponent>
             <Connection
                 FromID = "TA-01-N-2"
-                ToID = "PNS-3-S1-C1" ToNode = "2"/>
+                ToID = "PNS-3-S1-C1"
+                ToNode = "2"/>
         </PipingNetworkSegment>
         <PipingNetworkSegment
             ID = "PNS-3-S2"
@@ -185,9 +182,13 @@
             <CenterLine NumPoints = "0"/>
             <PipingComponent
                 ID = "PNS-3-S2-C1"
-                ComponentClass = "BallValve"
-                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
-                <ConnectionPoints NumPoints = "3" FlowIn = "1" FlowOut = "2">
+                ComponentClass = "ShutOffValve"
+                ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
+                <Association Type = "is referenced by" ItemID = "YC031.4_ASC_VR"/>
+                <ConnectionPoints
+                    NumPoints = "3"
+                    FlowIn = "1"
+                    FlowOut = "2">
                     <Node ID = "PNS-3-S2-C1-N0"/>
                     <Node ID = "PNS-3-S2-C1-N1" Type = "process"/>
                     <Node ID = "PNS-3-S2-C1-N2" Type = "process"/>
@@ -202,10 +203,12 @@
                     <Node ID = "FlowOut-PNS-3-N0"/>
                     <Node ID = "FlowOut-PNS-3-N1" Type = "process"/>
                 </ConnectionPoints>
-            </PipeConnectorSymbol>                        
+            </PipeConnectorSymbol>
             <Connection
-                FromID = "PNS-3-S1-C1" FromNode = "2"
-                ToID = "FlowOut-PNS-3" ToNode = "1"/>
+                FromID = "PNS-3-S1-C1"
+                FromNode = "2"
+                ToID = "FlowOut-PNS-3"
+                ToNode = "1"/>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <PipingNetworkSystem
@@ -219,16 +222,18 @@
             <CenterLine NumPoints = "0"/>
             <PipingComponent
                 ID = "PNS-4-S1-C1"
-                ComponentClass = "BallValve"
-                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                ComponentClass = "ButterflyValve"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416609">
                 <ConnectionPoints NumPoints = "2" FlowIn = "1">
                     <Node ID = "PNS-4-S1-C1-N0"/>
                     <Node ID = "PNS-4-S1-C1-N1" Type = "process"/>
                 </ConnectionPoints>
             </PipingComponent>
             <Connection
-                FromID = "TA-01-N-3" FromNode = "1"
-                ToID = "PNS-4-S1-C1" ToNode = "1"/>
+                FromID = "TA-01-N-3"
+                FromNode = "1"
+                ToID = "PNS-4-S1-C1"
+                ToNode = "1"/>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <PipingNetworkSystem
@@ -242,16 +247,316 @@
             <CenterLine NumPoints = "0"/>
             <PipingComponent
                 ID = "PNS-5-S1-C1"
-                ComponentClass = "BallValve"
-                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416654">
+                ComponentClass = "ButterflyValve"
+                ComponentClassURI = "http://data.posccaesar.org/rdl/RDS416609">
                 <ConnectionPoints NumPoints = "2" FlowIn = "1">
                     <Node ID = "PNS-5-S1-C1-N0"/>
                     <Node ID = "PNS-5-S1-C1-N1" Type = "process"/>
                 </ConnectionPoints>
             </PipingComponent>
             <Connection
-                FromID = "TA-01-N-4" FromNode = "1"
-                ToID = "PNS-5-S1-C1" ToNode = "1"/>
+                FromID = "TA-01-N-4"
+                FromNode = "1"
+                ToID = "PNS-5-S1-C1"
+                ToNode = "1"/>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
+    <PipingNetworkSystem
+        ID = "PNS-6"
+        ComponentClass = "PipingNetworkSystem"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
+        <PipingNetworkSegment
+            ID = "PNS-6-S1"
+            ComponentClass = "PipingNetworkSegment"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS267704">
+            <Association Type = "is the location of" ItemID = "LT100_PSGF"/>
+            <CenterLine NumPoints = "0"/>
+            <Connection
+                FromID = "PNS-4-S1-C1"
+                FromNode = "1"
+                ToID = "PNS-5-S1-C1"
+                ToNode = "1"/>
+        </PipingNetworkSegment>
+    </PipingNetworkSystem>
+    <InstrumentationLoopFunction
+        ID = "LI103_ILF"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <GenericAttributes Number = "1" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "InstrumentationLoopFunctionNumberAssignmentClass"
+                Value = "103"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
+        </GenericAttributes>
+        <Association Type = "is a collection including" ItemID = "LI103_PIF"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "LI103_PIF"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <GenericAttributes Number = "4" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
+                Value = "103"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
+            <GenericAttribute
+                Name = "LocationSpecialization"
+                Value = "CentralLocation"
+                ValueURI = "http://sandbox.dexpi.org/rdl/CentralLocation"
+                Format = "anyURI"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LocationSpecialization"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionCategoryAssignmentClass"
+                Value = "L"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Value = "I"
+                Format = "string"/>
+        </GenericAttributes>
+        <Association Type = "is a part of" ItemID = "LI103_ILF"/>
+        <Association Type = "is logical start of" ItemID = "LI103_PIF_IFlow_from"/>
+        <InformationFlow
+            ID = "LI103_PIF_IFlow_from"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LI103_PIF"/>
+            <Association Type = "has logical end" ItemID = "LIC101_PSGF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "LI103_PSGF"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+        </ProcessSignalGeneratingFunction>
+    </ProcessInstrumentationFunction>
+    <InstrumentationLoopFunction
+        ID = "LT100_ILF"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <GenericAttributes Number = "1" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "InstrumentationLoopFunctionNumberAssignmentClass"
+                Value = "100"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
+        </GenericAttributes>
+        <Association Type = "is a collection including" ItemID = "LT100_PIF"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "LT100_PIF"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <GenericAttributes Number = "4" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
+                Value = "100"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
+            <GenericAttribute
+                Name = "LocationSpecialization"
+                Value = "CentralLocation"
+                ValueURI = "http://sandbox.dexpi.org/rdl/CentralLocation"
+                Format = "anyURI"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LocationSpecialization"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionCategoryAssignmentClass"
+                Value = "L"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Value = "T"
+                Format = "string"/>
+        </GenericAttributes>
+        <Association Type = "is a part of" ItemID = "LT100_ILF"/>
+        <Association Type = "is logical end of" ItemID = "LT100_PIF_IFlow_to"/>
+        <Association Type = "is logical start of" ItemID = "LT100_PIF_IFlow_from"/>
+        <InformationFlow
+            ID = "LT100_PIF_IFlow_to"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LT100_PSGF"/>
+            <Association Type = "has logical end" ItemID = "LT100_PIF"/>
+        </InformationFlow>
+        <InformationFlow
+            ID = "LT100_PIF_IFlow_from"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LT100_PIF"/>
+            <Association Type = "has logical end" ItemID = "LIC101_PSGF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "LT100_PSGF"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+            <Association Type = "is logical start of" ItemID = "LT100_PIF_IFlow_to"/>
+            <Association Type = "is located in" ItemID = "PNS-6-S1"/>
+        </ProcessSignalGeneratingFunction>
+    </ProcessInstrumentationFunction>
+    <InstrumentationLoopFunction
+        ID = "LIC101_ILF"
+        TagName = "LIC101_ILF"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <GenericAttributes Number = "1" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "InstrumentationLoopFunctionNumberAssignmentClass"
+                Value = "101"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
+        </GenericAttributes>
+        <Association Type = "is a collection including" ItemID = "LIC101_PIF"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "LIC101_PIF"
+        TagName = "LIC101_PIF"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <GenericAttributes Number = "4" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
+                Value = "101"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
+            <GenericAttribute
+                Name = "LocationSpecialization"
+                Value = "CentralLocation"
+                ValueURI = "http://sandbox.dexpi.org/rdl/CentralLocation"
+                Format = "anyURI"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LocationSpecialization"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionCategoryAssignmentClass"
+                Value = "L"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Value = "IC"
+                Format = "string"/>
+        </GenericAttributes>
+        <Association Type = "is a part of" ItemID = "LIC101_ILF"/>
+        <Association Type = "is logical end of" ItemID = "LT100_PIF_IFlow_from"/>
+        <Association Type = "is logical end of" ItemID = "LI103_PIF_IFlow_from"/>
+        <Association Type = "is logical start of" ItemID = "LIC101_PIF_IFlow_from"/>
+        <InformationFlow
+            ID = "LIC101_PIF_IFlow_to"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LIC101_PSGF"/>
+            <Association Type = "has logical end" ItemID = "LIC101_PIF"/>
+        </InformationFlow>
+        <InformationFlow
+            ID = "LIC101_PIF_IFlow_from"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LIC101_PIF"/>
+            <Association Type = "has logical end" ItemID = "LY102_PSGF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "LIC101_PSGF"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+            <Association Type = "is logical start of" ItemID = "LIC101_PIF_IFlow_to"/>
+            <Association Type = "is logical end of" ItemID = "LT100_PIF_IFlow_from"/>
+            <Association Type = "is logical end of" ItemID = "LI103_PIF_IFlow_from"/>
+        </ProcessSignalGeneratingFunction>
+    </ProcessInstrumentationFunction>
+    <InstrumentationLoopFunction
+        ID = "LY102_ILF"
+        TagName = "LY102_ILF"
+        ComponentClass = "InstrumentationLoopFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
+        <GenericAttributes Number = "1" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "InstrumentationLoopFunctionNumberAssignmentClass"
+                Value = "102"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunctionNumberAssignmentClass"/>
+        </GenericAttributes>
+        <Association Type = "is a collection including" ItemID = "LY102_PIF"/>
+    </InstrumentationLoopFunction>
+    <ProcessInstrumentationFunction
+        ID = "LY102_PIF"
+        TagName = "LY102_PIF"
+        ComponentClass = "ProcessInstrumentationFunction"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
+        <GenericAttributes Number = "4" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionNumberAssignmentClass"
+                Value = "102"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionNumberAssignmentClass"/>
+            <GenericAttribute
+                Name = "LocationSpecialization"
+                Value = "CentralLocation"
+                ValueURI = "http://sandbox.dexpi.org/rdl/CentralLocation"
+                Format = "anyURI"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/LocationSpecialization"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionCategoryAssignmentClass"
+                Value = "L"
+                Format = "string"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionCategoryAssignmentClass"/>
+            <GenericAttribute
+                Name = "ProcessInstrumentationFunctionModifierAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunctionModifierAssignmentClass"
+                Value = "Y"
+                Format = "string"/>
+        </GenericAttributes>
+        <Association Type = "is a part of" ItemID = "LY102_ILF"/>
+        <Association Type = "is logical end of" ItemID = "LY102_PIF_IFlow_to"/>
+        <Association Type = "is logical start of" ItemID = "LY102_PIF_IFlow_from"/>
+        <ActuatingFunction
+            ID = "LY102_PIF_AF"
+            ComponentClass = "ActuatingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingFunction">
+            <Association Type = "is located in" ItemID = "PNS-3-S2"/>
+            <Association Type = "is logical end of" ItemID = "LY102_PIF_IFlow_from"/>
+            <Association Type = "is fulfilled by" ItemID = "LY102_PIF_AS"/>
+        </ActuatingFunction>
+        <InformationFlow
+            ID = "LY102_PIF_IFlow_to"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LY102_PSGF"/>
+            <Association Type = "has logical end" ItemID = "LY102_PIF"/>
+        </InformationFlow>
+        <InformationFlow
+            ID = "LY102_PIF_IFlow_from"
+            ComponentClass = "SignalConveyingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/SignalConveyingFunction">
+            <Association Type = "has logical start" ItemID = "LY102_PIF"/>
+            <Association Type = "has logical end" ItemID = "LY102_PIF_AF"/>
+        </InformationFlow>
+        <ProcessSignalGeneratingFunction
+            ID = "LY102_PSGF"
+            ComponentClass = "ProcessSignalGeneratingFunction"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingFunction">
+            <Association Type = "is logical start of" ItemID = "LY102_PIF_IFlow_to"/>
+            <Association Type = "is logical end of" ItemID = "LIC101_PIF_IFlow_from"/>
+        </ProcessSignalGeneratingFunction>
+    </ProcessInstrumentationFunction>
+    <ActuatingSystem
+        ID = "LY102_AS"
+        ComponentClass = "ActuatingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ActuatingSystem">
+        <Association Type = "fulfills" ItemID = "LY102_PIF_AF"/>
+        <ActuatingSystemComponent
+            ID = "LY102_ASC_VR"
+            ComponentClass = "ShutOffValveReference"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <Association Type = "refers to" ItemID = "PNS-3-S2-C1"/>
+        </ActuatingSystemComponent>
+        <ActuatingSystemComponent
+            ID = "LY102_ASC_CA"
+            ComponentClass = "ControlledActuator"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
+        </ActuatingSystemComponent>
+    </ActuatingSystem>
 </PlantModel>

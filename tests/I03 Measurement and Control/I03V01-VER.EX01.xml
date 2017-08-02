@@ -55,33 +55,14 @@
             <Association Type = "is the location of" ItemID = "PIF_LISCA03_AF"/>
             <PipingComponent
                 ID = "PC_ShutOffValve"
-                TagName = "LV 03"
                 ComponentClass = "ShutOffValve"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
-                <GenericAttributes Number = "3" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "TagNamePrefixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
-                        Value = "L"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSuffixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSuffixAssignmentClass"
-                        Value = "V"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSequenceNumberAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                        Value = "03"
-                        Format = "string"/>
-                </GenericAttributes>
                 <Association Type = "is referenced by" ItemID = "LISCA03_ASC_VR"/>
             </PipingComponent>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "LISCA03_ILF"
-        TagName = "03"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -95,7 +76,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "LISCA03_PIF"
-        TagName = "LISCA"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -163,34 +143,19 @@
             ID = "LISCA03_ASC_VR"
             ComponentClass = "ShutOffValveReference"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "LV 03"
+                    Format = "string"/>
+            </GenericAttributes>
             <Association Type = "refers to" ItemID = "PC_ShutOffValve"/>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
             ID = "LISCA03_ASC_CA"
             ComponentClass = "ControlledActuator"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
-            <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "DeviceTypeNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/DeviceTypeNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionRepresentationAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionRepresentationAssignmentClass"/>
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionSpecialization"
-                    Value = ""
-                    Format = "anyURI"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"/>
-            </GenericAttributes>
         </ActuatingSystemComponent>
     </ActuatingSystem>
 </PlantModel>

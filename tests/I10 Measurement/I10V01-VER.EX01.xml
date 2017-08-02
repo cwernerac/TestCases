@@ -23,7 +23,6 @@
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "LI10_ILF"
-        TagName = "10"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -37,7 +36,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "LI10_PIF"
-        TagName = "LI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">

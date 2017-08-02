@@ -22,28 +22,13 @@
             <ConnectionPoints NumPoints = "2">
                 <Node ID = "P4712_N1_N0"/>
                 <Node ID = "P4712_N1_N1" Type = "process">
-                    <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                        <GenericAttribute
-                            Name = "NominalDiameterNumericalValueRepresentationAssignmentClass"
-                            AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterNumericalValueRepresentationAssignmentClass"
-                            Value = ""
-                            Format = "string"/>
-                        <GenericAttribute
-                            Name = "NominalDiameterRepresentationAssignmentClass"
-                            AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                            Value = ""
-                            Format = "string"/>
+                    <GenericAttributes Number = "1" Set = "DexpiAttributes">
                         <GenericAttribute
                             Name = "NominalDiameterStandardSpecialization"
                             AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterStandardSpecialization"
                             Value = "Din2448ObjectDn80"
                             ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn80"
                             Format = "anyURI"/>
-                        <GenericAttribute
-                            Name = "NominalDiameterTypeRepresentationAssignmentClass"
-                            AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                            Value = ""
-                            Format = "string"/>
                     </GenericAttributes>
                 </Node>
             </ConnectionPoints>
@@ -53,7 +38,7 @@
         ID = "PNS1"
         ComponentClass = "PipingNetworkSystem"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS270359">
-        <GenericAttributes Number = "7" Set = "DexpiAttributes">
+        <GenericAttributes Number = "6" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "FluidCodeAssignmentClass"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/FluidCodeAssignmentClass"
@@ -85,11 +70,6 @@
                 Value = "Din2448ObjectDn80"
                 ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn80"
                 Format = "anyURI"/>
-            <GenericAttribute
-                Name = "NominalDiameterTypeRepresentationAssignmentClass"
-                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                Value = ""
-                Format = "string"/>
         </GenericAttributes>
         <PipingNetworkSegment
             ID = "PNS1_S1"
@@ -102,28 +82,13 @@
                 <ConnectionPoints NumPoints = "2" FlowOut = "1">
                     <Node ID = "PCS_1_N0"/>
                     <Node ID = "PCS_1_N1" Type = "process">
-                        <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                            <GenericAttribute
-                                Name = "NominalDiameterNumericalValueRepresentationAssignmentClass"
-                                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterNumericalValueRepresentationAssignmentClass"
-                                Value = ""
-                                Format = "string"/>
-                            <GenericAttribute
-                                Name = "NominalDiameterRepresentationAssignmentClass"
-                                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterRepresentationAssignmentClass"
-                                Value = ""
-                                Format = "string"/>
+                        <GenericAttributes Number = "1" Set = "DexpiAttributes">
                             <GenericAttribute
                                 Name = "NominalDiameterStandardSpecialization"
                                 AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterStandardSpecialization"
                                 Value = "Din2448ObjectDn80"
                                 ValueURI = "http://sandbox.dexpi.org/rdl/Din2448ObjectDn80"
                                 Format = "anyURI"/>
-                            <GenericAttribute
-                                Name = "NominalDiameterTypeRepresentationAssignmentClass"
-                                AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
-                                Value = ""
-                                Format = "string"/>
                         </GenericAttributes>
                     </Node>
                 </ConnectionPoints>

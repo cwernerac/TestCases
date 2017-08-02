@@ -22,30 +22,13 @@
                 ID = "PC_VenturiTube"
                 ComponentClass = "VenturiTube"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS648044">
-                <GenericAttributes Number = "3" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "TagNamePrefixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
-                        Value = "F"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSuffixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSuffixAssignmentClass"
-                        Value = "E"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSequenceNumberAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                        Value = "11"
-                        Format = "string"/>
-                </GenericAttributes>
                 <Association Type = "is the location of" ItemID = "FI11_PSGF"/>
+                <Association Type = "is referenced by" ItemID = "InlinePrimaryElementReference"/>
             </PipingComponent>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "FI11_ILF"
-        TagName = "11"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -59,7 +42,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "FI11_PIF"
-        TagName = "FI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -102,4 +84,22 @@
             <Association Type = "is located in" ItemID = "PC_VenturiTube"/>
         </ProcessSignalGeneratingFunction>
     </ProcessInstrumentationFunction>
+    <ProcessSignalGeneratingSystem
+        ID = "FI11_PSGS"
+        ComponentClass = "ProcessSignalGeneratingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingSystem">
+        <ProcessSignalGeneratingSystemComponent
+            ID = "InlinePrimaryElementReference"
+            ComponentClass = "PrimaryElement"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/PrimaryElement">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "FE 11"
+                    Format = "string"/>
+            </GenericAttributes>
+            <Association Type = "refers to" ItemID = "PC_VenturiTube"/>
+        </ProcessSignalGeneratingSystemComponent>
+    </ProcessSignalGeneratingSystem>
 </PlantModel>

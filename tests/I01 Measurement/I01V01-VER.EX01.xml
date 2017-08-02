@@ -28,7 +28,6 @@
                 Format = "string"/>
         </GenericAttributes>
         <Nozzle
-            TagName = "N3"
             ID = "T01_N3"
             ComponentClass = "Nozzle"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
@@ -64,7 +63,6 @@
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "ILF01"
-        TagName = "01"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -78,7 +76,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PIF01"
-        TagName = ""
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">

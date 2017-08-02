@@ -25,33 +25,14 @@
             <Association Type = "is the location of" ItemID = "HC12_PIF_AF"/>
             <PipingComponent
                 ID = "PC"
-                TagName = "HV 12"
                 ComponentClass = "ShutOffValve"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
-                <GenericAttributes Number = "3" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "TagNamePrefixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
-                        Value = "H"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSuffixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSuffixAssignmentClass"
-                        Value = "V"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSequenceNumberAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                        Value = "12"
-                        Format = "string"/>
-                </GenericAttributes>
                 <Association Type = "is referenced by" ItemID = "HV12_ASC_A"/>
             </PipingComponent>
         </PipingNetworkSegment>
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "HC12_ILF"
-        TagName = "HC12"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -65,7 +46,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "HC12_PIF"
-        TagName = "HC 12"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -118,61 +98,24 @@
             ID = "HV12_ASC_A"
             ComponentClass = "ShutOffValveReference"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "HV 12"
+                    Format = "string"/>
+            </GenericAttributes>
             <Association Type = "refers to" ItemID = "PC"/>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
             ID = "HV12_ASC_B"
             ComponentClass = "ControlledActuator"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
-            <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "DeviceTypeNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/DeviceTypeNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionRepresentationAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionRepresentationAssignmentClass"/>
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionSpecialization"
-                    Value = ""
-                    Format = "anyURI"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"/>
-            </GenericAttributes>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
             ID = "HV12_ASC_C"
             ComponentClass = "Positioner"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/Positioner">
-            <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "DeviceTypeNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/DeviceTypeNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionRepresentationAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionRepresentationAssignmentClass"/>
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
-                <GenericAttribute
-                    Name = "FailActionSpecialization"
-                    Value = ""
-                    Format = "anyURI"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"/>
-            </GenericAttributes>
         </ActuatingSystemComponent>
     </ActuatingSystem>
 </PlantModel>
