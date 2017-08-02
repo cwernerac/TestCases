@@ -1,6 +1,6 @@
 <html>
 <h1>DEXPI Verification Report</h1>
-<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-07-20 19:01:30.</p>
+<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-08-02 11:35:17.</p>
 <p><a href="#overview">Overview</a></p>
 <p><a href="#object-data">Object Data</a></p>
 <h2 id="overview">Overview</h2>
@@ -11,7 +11,7 @@
 <a href="#object-data-1.1.1">1.1.1 ActuatingSystems</a><ul><li id="overview-1.1.1.1">
 <a href="#object-data-1.1.1.1">1.1.1.1 ActuatingSystem ???</a><ul>
 <li id="overview-1.1.1.1.1"><a href="#object-data-1.1.1.1.1">1.1.1.1.1 ControlledActuator: ControlledActuator ???</a></li>
-<li id="overview-1.1.1.1.2"><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference ???</a></li>
+<li id="overview-1.1.1.1.2"><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference FV 04</a></li>
 </ul>
 </li></ul>
 </li>
@@ -61,6 +61,11 @@
 </ul>
 </li>
 </ul>
+</li></ul>
+</li>
+<li id="overview-1.1.5">
+<a href="#object-data-1.1.5">1.1.5 ProcessSignalGeneratingSystems</a><ul><li id="overview-1.1.5.1">
+<a href="#object-data-1.1.5.1">1.1.5.1 ProcessSignalGeneratingSystem ???</a><ul><li id="overview-1.1.5.1.1"><a href="#object-data-1.1.5.1.1">1.1.5.1.1 PrimaryElement: PrimaryElement FT 04</a></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -124,6 +129,10 @@
 <td valign="top" rowspan="1">ProcessInstrumentationFunctions</td>
 <td><a href="#object-data-1.1.4.1">1.1.4.1 ProcessInstrumentationFunction 04</a></td>
 </tr>
+<tr>
+<td valign="top" rowspan="1">ProcessSignalGeneratingSystems</td>
+<td><a href="#object-data-1.1.5.1">1.1.5.1 ProcessSignalGeneratingSystem ???</a></td>
+</tr>
 </table>
 <h3 id="object-data-1.1.1"><a href="#overview-1.1.1">1.1.1 ActuatingSystems</a></h3>
 <h3 id="object-data-1.1.1.1"><a href="#overview-1.1.1.1">1.1.1.1 ActuatingSystem ???</a></h3>
@@ -139,7 +148,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>166</td>
+<td>130</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -154,7 +163,7 @@
 </tr>
 <tr>
 <td valign="top" rowspan="1">ShutOffValveReference</td>
-<td><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference ???</a></td>
+<td><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference FV 04</a></td>
 </tr>
 </table>
 <h3 id="object-data-1.1.1.1.1"><a href="#overview-1.1.1.1.1">1.1.1.1.1 ControlledActuator: ControlledActuator ???</a></h3>
@@ -170,7 +179,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>177</td>
+<td>148</td>
 </tr>
 </table>
 <h4>Data Attributes</h4>
@@ -180,10 +189,6 @@
 <th>Value</th>
 </tr></thead>
 <tr>
-<td valign="top" rowspan="1">DeviceTypeNameAssignmentClass</td>
-<td>""</td>
-</tr>
-<tr>
 <td valign="top" rowspan="1">FailActionRepresentationAssignmentClass</td>
 <td>"NC"</td>
 </tr>
@@ -191,12 +196,8 @@
 <td valign="top" rowspan="1">FailActionSpecialization</td>
 <td>fail close</td>
 </tr>
-<tr>
-<td valign="top" rowspan="1">SubTagNameAssignmentClass</td>
-<td>""</td>
-</tr>
 </table>
-<h3 id="object-data-1.1.1.1.2"><a href="#overview-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference ???</a></h3>
+<h3 id="object-data-1.1.1.1.2"><a href="#overview-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference FV 04</a></h3>
 <h4>Meta Data</h4>
 <table border="1">
 <tr bgcolor="#cccccc">
@@ -209,7 +210,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>171</td>
+<td>135</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -221,6 +222,17 @@
 <tr>
 <td valign="top" rowspan="1">Valve</td>
 <td><a href="#object-data-1.1.3.1.1.1.2.2">1.1.3.1.1.1.2.2 ShutOffValve ???</a></td>
+</tr>
+</table>
+<h4>Data Attributes</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">SubTagNameAssignmentClass</td>
+<td>"FV 04"</td>
 </tr>
 </table>
 <h3 id="object-data-1.1.2"><a href="#overview-1.1.2">1.1.2 InstrumentationLoopFunctions</a></h3>
@@ -237,7 +249,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>92</td>
+<td>57</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -277,6 +289,162 @@
 <tr>
 <td>Source Line</td>
 <td>16</td>
+</tr>
+</table>
+<h4>Topology Overview</h4>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="175pt" height="152pt" viewBox="0.00 0.00 174.87 151.78">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(93.7841 69.6751)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-93.7841,82.105 -93.7841,-69.6751 81.0828,-69.6751 81.0828,82.105 -93.7841,82.105"></polygon>
+<!-- obj220142096 -->
+<g id="node1" class="node"><title>obj220142096</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="-53.7841,-24.1891 -89.7841,-24.1891 -89.7841,11.8109 -53.7841,11.8109 -53.7841,-24.1891"></polygon>
+</g>
+<!-- obj220142320 -->
+<g id="node2" class="node"><title>obj220142320</title>
+<polygon fill="none" stroke="black" points="-13.3627,4.49125 -31.3627,22.4912 -13.3627,40.4912 4.6373,22.4912 -13.3627,4.49125"></polygon>
+</g>
+<!-- obj220142096&#45;&gt;obj220142320 -->
+<g id="edge1" class="edge"><title>obj220142096-&gt;obj220142320</title>
+<path fill="none" stroke="black" stroke-width="3" d="M-53.7802,-4.06054C-46.1931,-1.24792 -37.4376,2.90893 -30.0032,7.18778"></path>
+<polygon fill="black" stroke="black" stroke-width="3" points="-28.059,4.27609 -21.4802,12.5809 -31.802,10.1913 -28.059,4.27609"></polygon>
+</g>
+<!-- obj220142096&#45;&gt;obj220142320 -->
+<g id="edge9" class="edge"><title>obj220142096-&gt;obj220142320</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M-53.5627,10.0114C-48.6343,12.7684 -43.2247,15.4384 -38.0107,17.6888"></path>
+<polygon fill="black" stroke="black" points="-37.8852,17.7385 -35.0117,21.8885 -30.0757,20.8322 -32.9492,16.6822 -37.8852,17.7385"></polygon>
+</g>
+<!-- obj220143024 -->
+<g id="node6" class="node"><title>obj220143024</title>
+<polygon fill="blue" stroke="blue" points="31.0034,-25.3699 -4.99665,-25.3699 -4.99665,-18.3699 31.0034,-18.3699 31.0034,-25.3699"></polygon>
+</g>
+<!-- obj220142096&#45;&gt;obj220143024 -->
+<g id="edge5" class="edge"><title>obj220142096-&gt;obj220143024</title>
+<path fill="none" stroke="blue" stroke-width="3" d="M-53.3865,-9.59161C-42.1997,-11.6605 -27.6889,-14.3442 -15.0879,-16.6746"></path>
+<polygon fill="blue" stroke="blue" stroke-width="3" points="-15.5369,-20.1509 -5.06708,-18.5279 -14.2638,-13.2676 -15.5369,-20.1509"></polygon>
+</g>
+<!-- obj220142192 -->
+<g id="node3" class="node"><title>obj220142192</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="57.7351,42.105 21.7351,42.105 21.7351,78.105 57.7351,78.105 57.7351,42.105"></polygon>
+</g>
+<!-- obj220142320&#45;&gt;obj220142192 -->
+<g id="edge2" class="edge"><title>obj220142320-&gt;obj220142192</title>
+<path fill="none" stroke="black" stroke-width="3" d="M1.44111,26.0193C6.34087,28.608 11.8836,32.0966 17.2101,35.8767"></path>
+<polygon fill="black" stroke="black" stroke-width="3" points="19.4073,33.15 25.2788,41.969 15.1892,38.7364 19.4073,33.15"></polygon>
+</g>
+<!-- obj220142256 -->
+<g id="node5" class="node"><title>obj220142256</title>
+<ellipse fill="orange" stroke="orange" cx="71.5828" cy="5.63785" rx="5.5" ry="5.5"></ellipse>
+</g>
+<!-- obj220142320&#45;&gt;obj220142256 -->
+<g id="edge4" class="edge"><title>obj220142320-&gt;obj220142256</title>
+<path fill="none" stroke="black" d="M1.82385,19.4782C17.1871,16.4301 40.8106,11.7431 56.2323,8.68342"></path>
+<polygon fill="black" stroke="black" points="55.6641,5.22801 66.154,6.71492 57.0264,12.0942 55.6641,5.22801"></polygon>
+</g>
+<!-- obj220142192&#45;&gt;obj220142320 -->
+<g id="edge12" class="edge"><title>obj220142192-&gt;obj220142320</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21.7051,54.797C14.5775,50.7082 6.56567,45.1369 -0.0335365,39.71"></path>
+<polygon fill="black" stroke="black" points="-0.243033,39.5245 -1.53065,34.6437 -6.53125,33.955 -5.24363,38.8358 -0.243033,39.5245"></polygon>
+</g>
+<!-- obj220143440 -->
+<g id="node4" class="node"><title>obj220143440</title>
+<ellipse fill="orange" stroke="orange" cx="-39.1744" cy="-60.1751" rx="5.5" ry="5.5"></ellipse>
+</g>
+<!-- obj220143440&#45;&gt;obj220142096 -->
+<g id="edge11" class="edge"><title>obj220143440-&gt;obj220142096</title>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M-42.1838,-55.193C-45.4851,-49.7277 -51.0363,-40.5375 -56.4453,-31.5828"></path>
+<polygon fill="orange" stroke="orange" points="-56.5597,-31.3933 -61.128,-29.2459 -60.9029,-24.2032 -56.3346,-26.3505 -56.5597,-31.3933"></polygon>
+</g>
+<!-- obj220143440&#45;&gt;obj220142320 -->
+<g id="edge3" class="edge"><title>obj220143440-&gt;obj220142320</title>
+<path fill="none" stroke="black" d="M-37.4808,-54.7511C-34.1309,-44.0223 -26.4815,-19.5237 -20.689,-0.972601"></path>
+<polygon fill="black" stroke="black" points="-17.3408,-1.9922 -17.7012,8.59651 -24.0227,0.0941897 -17.3408,-1.9922"></polygon>
+</g>
+<!-- obj220143440&#45;&gt;obj220143024 -->
+<g id="edge7" class="edge"><title>obj220143440-&gt;obj220143024</title>
+<path fill="none" stroke="orange" d="M-34.7258,-56.9092C-27.1784,-51.3684 -11.5835,-39.9198 -0.268476,-31.6131"></path>
+<polygon fill="orange" stroke="orange" points="1.96909,-34.3124 7.95885,-25.5732 -2.1734,-28.6697 1.96909,-34.3124"></polygon>
+</g>
+<!-- obj220142256&#45;&gt;obj220142192 -->
+<g id="edge13" class="edge"><title>obj220142256-&gt;obj220142192</title>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M68.6437,10.6644C65.4196,16.1784 59.998,25.4505 54.7154,34.485"></path>
+<polygon fill="orange" stroke="orange" points="54.6021,34.679 50.0649,36.8913 50.362,41.9304 54.8992,39.718 54.6021,34.679"></polygon>
+</g>
+<!-- obj220143024&#45;&gt;obj220142320 -->
+<g id="edge10" class="edge"><title>obj220143024-&gt;obj220142320</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M10.7554,-18.0877C7.91606,-13.3105 2.82281,-4.74103 -1.95391,3.29585"></path>
+<polygon fill="black" stroke="black" points="-2.23814,3.77414 -6.791,5.95399 -6.52992,10.995 -1.97707,8.81518 -2.23814,3.77414"></polygon>
+</g>
+<!-- obj220143024&#45;&gt;obj220142192 -->
+<g id="edge6" class="edge"><title>obj220143024-&gt;obj220142192</title>
+<path fill="none" stroke="blue" stroke-width="3" d="M14.152,-18.3475C16.9813,-9.67125 24.5041,13.398 30.6646,32.2897"></path>
+<polygon fill="blue" stroke="blue" stroke-width="3" points="34.0462,31.3706 33.819,41.963 27.3911,33.5408 34.0462,31.3706"></polygon>
+</g>
+<!-- obj220143024&#45;&gt;obj220142256 -->
+<g id="edge8" class="edge"><title>obj220143024-&gt;obj220142256</title>
+<path fill="none" stroke="orange" d="M20.6616,-18.2737C29.9694,-13.903 45.862,-6.4401 57.4215,-1.01203"></path>
+<polygon fill="orange" stroke="orange" points="58.9418,-4.16484 66.5058,3.25382 55.9664,2.17136 58.9418,-4.16484"></polygon>
+</g>
+</g>
+</svg><h5>Legend</h5>
+<table border="1">
+<tr>
+<th bgcolor="#cccccc">Symbol</th>
+<th bgcolor="#cccccc">Component</th>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44pt" height="15pt" viewBox="0.00 0.00 44.00 15.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22 7.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22,7.5 -22,-7.5 22,-7.5 22,7.5 -22,7.5"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="blue" stroke="blue" points="18,-3.5 -18,-3.5 -18,3.5 18,3.5 18,-3.5"></polygon>
+</g>
+</g>
+</svg></td>
+<td>Pipe</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44pt" height="44pt" viewBox="0.00 0.00 44.00 44.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22 22)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22,22 -22,-22 22,-22 22,22 -22,22"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="18,-18 -18,-18 -18,18 18,18 18,-18"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>PipingComponent</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45pt" height="44pt" viewBox="0.00 0.00 44.77 44.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22.3831 22)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22.3831,22 -22.3831,-22 22.3831,-22 22.3831,22 -22.3831,22"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="black" points="5.17463e-015,-18 -18.267,-2.20436e-015 -2.93756e-015,18 18.267,1.96425e-015 5.17463e-015,-18"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>PipingNetworkSegment</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19pt" height="19pt" viewBox="0.00 0.00 19.00 19.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(9.5 9.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-9.5,9.5 -9.5,-9.5 9.5,-9.5 9.5,9.5 -9.5,9.5"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<ellipse fill="orange" stroke="orange" cx="0" cy="-0" rx="5.5" ry="5.5"></ellipse>
+</g>
+</g>
+</svg></td>
+<td>PipingNode</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -367,7 +535,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>51</td>
+<td>35</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -421,19 +589,6 @@
 <td><a href="#object-data-1.1.3.1.1.1.2.1.1.1">1.1.3.1.1.1.2.1.1.1 PipingNode</a></td>
 </tr>
 </table>
-<h4>Data Attributes</h4>
-<table border="1">
-<thead><tr bgcolor="#cccccc">
-<th>Relation</th>
-<th>Value</th>
-</tr></thead>
-<tr>
-<td valign="top" rowspan="3">unknown relation</td>
-<td>"04"</td>
-</tr>
-<tr><td>"F"</td></tr>
-<tr><td>"T"</td></tr>
-</table>
 <h3 id="object-data-1.1.3.1.1.1.2.1.1"><a href="#overview-1.1.3.1.1.1.2.1.1">1.1.3.1.1.1.2.1.1 Nodes</a></h3>
 <h3 id="object-data-1.1.3.1.1.1.2.1.1.1"><a href="#overview-1.1.3.1.1.1.2.1.1.1">1.1.3.1.1.1.2.1.1.1 PipingNode</a></h3>
 <h4>Meta Data</h4>
@@ -448,7 +603,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>47</td>
+<td>31</td>
 </tr>
 </table>
 <h4>Data Attributes</h4>
@@ -475,7 +630,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>56</td>
+<td>39</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -488,19 +643,6 @@
 <td valign="top" rowspan="1">Nodes</td>
 <td><a href="#object-data-1.1.3.1.1.1.2.2.1.1">1.1.3.1.1.1.2.2.1.1 PipingNode</a></td>
 </tr>
-</table>
-<h4>Data Attributes</h4>
-<table border="1">
-<thead><tr bgcolor="#cccccc">
-<th>Relation</th>
-<th>Value</th>
-</tr></thead>
-<tr>
-<td valign="top" rowspan="3">unknown relation</td>
-<td>"04"</td>
-</tr>
-<tr><td>"F"</td></tr>
-<tr><td>"V"</td></tr>
 </table>
 <h3 id="object-data-1.1.3.1.1.1.2.2.1"><a href="#overview-1.1.3.1.1.1.2.2.1">1.1.3.1.1.1.2.2.1 Nodes</a></h3>
 <h3 id="object-data-1.1.3.1.1.1.2.2.1.1"><a href="#overview-1.1.3.1.1.1.2.2.1.1">1.1.3.1.1.1.2.2.1.1 PipingNode</a></h3>
@@ -516,7 +658,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>77</td>
+<td>43</td>
 </tr>
 </table>
 <h4>Data Attributes</h4>
@@ -544,7 +686,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>106</td>
+<td>70</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -604,7 +746,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>136</td>
+<td>100</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -632,7 +774,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>158</td>
+<td>122</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -660,7 +802,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>144</td>
+<td>108</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -691,7 +833,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>151</td>
+<td>115</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -707,6 +849,61 @@
 <tr>
 <td valign="top" rowspan="1">Target</td>
 <td><a href="#object-data-1.1.4.1.1.1">1.1.4.1.1.1 ActuatingFunction ???</a></td>
+</tr>
+</table>
+<h3 id="object-data-1.1.5"><a href="#overview-1.1.5">1.1.5 ProcessSignalGeneratingSystems</a></h3>
+<h3 id="object-data-1.1.5.1"><a href="#overview-1.1.5.1">1.1.5.1 ProcessSignalGeneratingSystem ???</a></h3>
+<h4>Meta Data</h4>
+<table border="1">
+<tr bgcolor="#cccccc">
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Source ID</td>
+<td>FIC04_PSGS</td>
+</tr>
+<tr>
+<td>Source Line</td>
+<td>167</td>
+</tr>
+</table>
+<h4>Components</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">PrimaryElement</td>
+<td><a href="#object-data-1.1.5.1.1">1.1.5.1.1 PrimaryElement FT 04</a></td>
+</tr>
+</table>
+<h3 id="object-data-1.1.5.1.1"><a href="#overview-1.1.5.1.1">1.1.5.1.1 PrimaryElement: PrimaryElement FT 04</a></h3>
+<h4>Meta Data</h4>
+<table border="1">
+<tr bgcolor="#cccccc">
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Source ID</td>
+<td>InlinePrimaryElementReference</td>
+</tr>
+<tr>
+<td>Source Line</td>
+<td>171</td>
+</tr>
+</table>
+<h4>Data Attributes</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">SubTagNameAssignmentClass</td>
+<td>"FT 04"</td>
 </tr>
 </table>
 </html>

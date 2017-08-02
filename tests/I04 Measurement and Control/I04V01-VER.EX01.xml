@@ -24,24 +24,8 @@
                 ID = "PC_VenturiTube"
                 ComponentClass = "VenturiTube"
                 ComponentClassURI = "http://data.posccaesar.org/rdl/RDS648044">
-                <GenericAttributes Number = "3" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "TagNamePrefixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
-                        Value = "F"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSuffixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSuffixAssignmentClass"
-                        Value = "T"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSequenceNumberAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                        Value = "04"
-                        Format = "string"/>
-                </GenericAttributes>
                 <Association Type = "is the location of" ItemID = "FIC04_PSGF"/>
+                <Association Type = "is referenced by" ItemID = "InlinePrimaryElementReference"/>
                 <ConnectionPoints NumPoints = "3" FlowOut = "1">
                     <Node ID = "PC_VT_ND0"/>
                     <Node ID = "PC_VT_ND1" Type = "process"/>
@@ -51,26 +35,8 @@
             <CenterLine NumPoints = "0"/>
             <PipingComponent
                 ID = "PC_ShutOffValve"
-                TagName = "FV 04"
                 ComponentClass = "ShutOffValve"
                 ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValve">
-                <GenericAttributes Number = "3" Set = "DexpiAttributes">
-                    <GenericAttribute
-                        Name = "TagNamePrefixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
-                        Value = "F"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSuffixAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSuffixAssignmentClass"
-                        Value = "V"
-                        Format = "string"/>
-                    <GenericAttribute
-                        Name = "TagNameSequenceNumberAssignmentClass"
-                        AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
-                        Value = "04"
-                        Format = "string"/>
-                </GenericAttributes>
                 <Association Type = "is referenced by" ItemID = "FIC04_ASC_VR"/>
                 <ConnectionPoints NumPoints = "3" FlowIn = "1">
                     <Node ID = "PC_SOV_ND0"/>
@@ -87,7 +53,6 @@
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "FIC04_ILF"
-        TagName = "04"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -101,7 +66,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "FIC04_PIF"
-        TagName = "FIC"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -169,28 +133,25 @@
             ID = "FIC04_ASC_VR"
             ComponentClass = "ShutOffValveReference"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ShutOffValveReference">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "FV 04"
+                    Format = "string"/>
+            </GenericAttributes>
             <Association Type = "refers to" ItemID = "PC_ShutOffValve"/>
         </ActuatingSystemComponent>
         <ActuatingSystemComponent
             ID = "FIC04_ASC_CA"
             ComponentClass = "ControlledActuator"
             ComponentClassURI = "http://sandbox.dexpi.org/rdl/ControlledActuator">
-            <GenericAttributes Number = "4" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "DeviceTypeNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/DeviceTypeNameAssignmentClass"/>
+            <GenericAttributes Number = "2" Set = "DexpiAttributes">
                 <GenericAttribute
                     Name = "FailActionRepresentationAssignmentClass"
                     Value = "NC"
                     Format = "string"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionRepresentationAssignmentClass"/>
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    Value = ""
-                    Format = "string"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"/>
                 <GenericAttribute
                     Name = "FailActionSpecialization"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/FailActionSpecialization"
@@ -200,4 +161,22 @@
             </GenericAttributes>
         </ActuatingSystemComponent>
     </ActuatingSystem>
+    <ProcessSignalGeneratingSystem
+        ID = "FIC04_PSGS"
+        ComponentClass = "ProcessSignalGeneratingSystem"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessSignalGeneratingSystem">
+        <ProcessSignalGeneratingSystemComponent
+            ID = "InlinePrimaryElementReference"
+            ComponentClass = "PrimaryElement"
+            ComponentClassURI = "http://sandbox.dexpi.org/rdl/PrimaryElement">
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "FT 04"
+                    Format = "string"/>
+            </GenericAttributes>
+            <Association Type = "refers to" ItemID = "PC_VenturiTube"/>
+        </ProcessSignalGeneratingSystemComponent>
+    </ProcessSignalGeneratingSystem>
 </PlantModel>

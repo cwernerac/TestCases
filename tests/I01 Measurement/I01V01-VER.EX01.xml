@@ -28,7 +28,6 @@
                 Format = "string"/>
         </GenericAttributes>
         <Nozzle
-            TagName = "N3"
             ID = "T01_N3"
             ComponentClass = "Nozzle"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">

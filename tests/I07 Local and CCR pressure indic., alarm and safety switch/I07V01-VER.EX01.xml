@@ -24,7 +24,6 @@
     </PipingNetworkSystem>
     <InstrumentationLoopFunction
         ID = "PI041_ILF"
-        TagName = "041"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -38,7 +37,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PI041_PIF"
-        TagName = "PI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -83,7 +81,6 @@
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
         ID = "PI043_ILF"
-        TagName = "043"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -97,7 +94,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "PI043_PIF"
-        TagName = "PI"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">
@@ -142,7 +138,6 @@
     </ProcessInstrumentationFunction>
     <InstrumentationLoopFunction
         ID = "UZ042_ILF"
-        TagName = "042"
         ComponentClass = "InstrumentationLoopFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/InstrumentationLoopFunction">
         <GenericAttributes Number = "1" Set = "DexpiAttributes">
@@ -156,7 +151,6 @@
     </InstrumentationLoopFunction>
     <ProcessInstrumentationFunction
         ID = "UZ042_PIF"
-        TagName = "UZ"
         ComponentClass = "ProcessInstrumentationFunction"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/ProcessInstrumentationFunction">
         <GenericAttributes Number = "4" Set = "DexpiAttributes">

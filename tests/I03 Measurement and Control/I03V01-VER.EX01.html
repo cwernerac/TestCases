@@ -1,6 +1,6 @@
 <html>
 <h1>DEXPI Verification Report</h1>
-<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-07-20 19:04:13.</p>
+<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-08-01 17:31:59.</p>
 <p><a href="#overview">Overview</a></p>
 <p><a href="#object-data">Object Data</a></p>
 <h2 id="overview">Overview</h2>
@@ -11,7 +11,7 @@
 <a href="#object-data-1.1.1">1.1.1 ActuatingSystems</a><ul><li id="overview-1.1.1.1">
 <a href="#object-data-1.1.1.1">1.1.1.1 ActuatingSystem ???</a><ul>
 <li id="overview-1.1.1.1.1"><a href="#object-data-1.1.1.1.1">1.1.1.1.1 ControlledActuator: ControlledActuator ???</a></li>
-<li id="overview-1.1.1.1.2"><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference ???</a></li>
+<li id="overview-1.1.1.1.2"><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference LV 03</a></li>
 </ul>
 </li></ul>
 </li>
@@ -149,7 +149,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>160</td>
+<td>140</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -164,7 +164,7 @@
 </tr>
 <tr>
 <td valign="top" rowspan="1">ShutOffValveReference</td>
-<td><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference ???</a></td>
+<td><a href="#object-data-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference LV 03</a></td>
 </tr>
 </table>
 <h3 id="object-data-1.1.1.1.1"><a href="#overview-1.1.1.1.1">1.1.1.1.1 ControlledActuator: ControlledActuator ???</a></h3>
@@ -180,33 +180,10 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>171</td>
+<td>158</td>
 </tr>
 </table>
-<h4>Data Attributes</h4>
-<table border="1">
-<thead><tr bgcolor="#cccccc">
-<th>Relation</th>
-<th>Value</th>
-</tr></thead>
-<tr>
-<td valign="top" rowspan="1">DeviceTypeNameAssignmentClass</td>
-<td>""</td>
-</tr>
-<tr>
-<td valign="top" rowspan="1">FailActionRepresentationAssignmentClass</td>
-<td>""</td>
-</tr>
-<tr>
-<td valign="top" rowspan="1">FailActionSpecialization</td>
-<td>?</td>
-</tr>
-<tr>
-<td valign="top" rowspan="1">SubTagNameAssignmentClass</td>
-<td>""</td>
-</tr>
-</table>
-<h3 id="object-data-1.1.1.1.2"><a href="#overview-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference ???</a></h3>
+<h3 id="object-data-1.1.1.1.2"><a href="#overview-1.1.1.1.2">1.1.1.1.2 ShutOffValveReference: ShutOffValveReference LV 03</a></h3>
 <h4>Meta Data</h4>
 <table border="1">
 <tr bgcolor="#cccccc">
@@ -219,7 +196,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>165</td>
+<td>145</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -231,6 +208,17 @@
 <tr>
 <td valign="top" rowspan="1">Valve</td>
 <td><a href="#object-data-1.1.3.1.1.2.1.1">1.1.3.1.1.2.1.1 ShutOffValve ???</a></td>
+</tr>
+</table>
+<h4>Data Attributes</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">SubTagNameAssignmentClass</td>
+<td>"LV 03"</td>
 </tr>
 </table>
 <h3 id="object-data-1.1.2"><a href="#overview-1.1.2">1.1.2 InstrumentationLoopFunctions</a></h3>
@@ -247,7 +235,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>86</td>
+<td>67</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -287,6 +275,167 @@
 <tr>
 <td>Source Line</td>
 <td>30</td>
+</tr>
+</table>
+<h4>Topology Overview</h4>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="286pt" height="244pt" viewBox="0.00 0.00 286.03 244.11">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(129.827 150.339)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-129.827,93.7681 -129.827,-150.339 156.201,-150.339 156.201,93.7681 -129.827,93.7681"></polygon>
+<!-- obj195889616 -->
+<g id="node1" class="node"><title>obj195889616</title>
+<polygon fill="none" stroke="grey" points="-12.0672,-22.4416 -12.0672,-37.3532 -22.6113,-47.8974 -37.523,-47.8974 -48.0672,-37.3532 -48.0672,-22.4416 -37.523,-11.8974 -22.6113,-11.8974 -12.0672,-22.4416"></polygon>
+</g>
+<!-- obj195887952 -->
+<g id="node2" class="node"><title>obj195887952</title>
+<polygon fill="none" stroke="black" points="38.2831,-17.8752 20.2831,0.12479 38.2831,18.1248 56.2831,0.12479 38.2831,-17.8752"></polygon>
+</g>
+<!-- obj195889616&#45;&gt;obj195887952 -->
+<g id="edge1" class="edge"><title>obj195889616-&gt;obj195887952</title>
+<path fill="none" stroke="black" stroke-width="3" d="M-12.1089,-22.0094C-3.39496,-18.1819 7.1502,-13.55 16.3372,-9.51474"></path>
+<polygon fill="black" stroke="black" stroke-width="3" points="17.8739,-12.6626 25.6221,-5.43644 15.0588,-6.25356 17.8739,-12.6626"></polygon>
+</g>
+<!-- obj195889680 -->
+<g id="node6" class="node"><title>obj195889680</title>
+<polygon fill="none" stroke="grey" points="-85.8272,-31.2095 -85.8272,-46.1212 -96.3714,-56.6654 -111.283,-56.6654 -121.827,-46.1212 -121.827,-31.2095 -111.283,-20.6654 -96.3714,-20.6654 -85.8272,-31.2095"></polygon>
+<polygon fill="none" stroke="grey" points="-81.8272,-29.5527 -81.8272,-47.7781 -94.7145,-60.6654 -112.94,-60.6654 -125.827,-47.7781 -125.827,-29.5527 -112.94,-16.6654 -94.7145,-16.6654 -81.8272,-29.5527"></polygon>
+</g>
+<!-- obj195889616&#45;&gt;obj195889680 -->
+<g id="edge5" class="edge"><title>obj195889616-&gt;obj195889680</title>
+<path fill="none" stroke="grey" stroke-dasharray="5,2" d="M-48.3,-32.0648C-55.7723,-32.953 -64.6306,-34.006 -73.0521,-35.0071"></path>
+<polygon fill="grey" stroke="grey" points="-73.2523,-35.0308 -77.0924,-38.307 -81.5936,-36.0224 -77.7535,-32.7462 -73.2523,-35.0308"></polygon>
+</g>
+<!-- obj195888304 -->
+<g id="node3" class="node"><title>obj195888304</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="78.8898,53.7681 42.8898,53.7681 42.8898,89.7681 78.8898,89.7681 78.8898,53.7681"></polygon>
+</g>
+<!-- obj195887952&#45;&gt;obj195888304 -->
+<g id="edge2" class="edge"><title>obj195887952-&gt;obj195888304</title>
+<path fill="none" stroke="black" stroke-width="3" d="M46.6433,9.79565C50.9833,18.4669 55.6376,31.5894 58.8308,43.5368"></path>
+<polygon fill="black" stroke="black" stroke-width="3" points="62.3134,43.0542 61.2163,53.5921 55.5025,44.67 62.3134,43.0542"></polygon>
+</g>
+<!-- obj53541360 -->
+<g id="node5" class="node"><title>obj53541360</title>
+<ellipse fill="orange" stroke="orange" cx="109.747" cy="22.2898" rx="5.5" ry="5.5"></ellipse>
+</g>
+<!-- obj195887952&#45;&gt;obj53541360 -->
+<g id="edge4" class="edge"><title>obj195887952-&gt;obj53541360</title>
+<path fill="none" stroke="black" d="M52.062,4.39843C64.2349,8.17396 81.9577,13.6708 94.5412,17.5737"></path>
+<polygon fill="black" stroke="black" points="95.8317,14.3094 104.346,20.6147 93.758,20.9952 95.8317,14.3094"></polygon>
+</g>
+<!-- obj195888304&#45;&gt;obj195887952 -->
+<g id="edge7" class="edge"><title>obj195888304-&gt;obj195887952</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M48.753,53.6541C45.3733,45.3364 42.1104,35.3265 39.7834,26.2196"></path>
+<polygon fill="black" stroke="black" points="39.7418,26.0375 41.5332,21.3183 37.8659,17.8496 36.0746,22.5689 39.7418,26.0375"></polygon>
+</g>
+<!-- obj195887600 -->
+<g id="node4" class="node"><title>obj195887600</title>
+<ellipse fill="grey" stroke="grey" cx="26.9748" cy="-73.6199" rx="5.5" ry="5.5"></ellipse>
+</g>
+<!-- obj195887600&#45;&gt;obj195889616 -->
+<g id="edge6" class="edge"><title>obj195887600-&gt;obj195889616</title>
+<path fill="none" stroke="grey" stroke-dasharray="5,2" d="M22.4988,-70.189C15.7999,-65.0543 2.72994,-55.0363 -8.70086,-46.2746"></path>
+<polygon fill="grey" stroke="grey" points="-8.86784,-46.1466 -13.9047,-45.8138 -15.5347,-41.0365 -10.4979,-41.3693 -8.86784,-46.1466"></polygon>
+</g>
+<!-- obj195887600&#45;&gt;obj195887952 -->
+<g id="edge3" class="edge"><title>obj195887600-&gt;obj195887952</title>
+<path fill="none" stroke="black" d="M27.8622,-67.8333C29.2497,-58.7844 32.0162,-40.7438 34.3501,-25.5236"></path>
+<polygon fill="black" stroke="black" points="37.8183,-25.9972 35.8745,-15.5823 30.8992,-24.9362 37.8183,-25.9972"></polygon>
+</g>
+<!-- obj53541360&#45;&gt;obj195888304 -->
+<g id="edge9" class="edge"><title>obj53541360-&gt;obj195888304</title>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M105.581,26.5083C100.874,31.2757 92.8226,39.4292 84.8397,47.5136"></path>
+<polygon fill="orange" stroke="orange" points="84.7069,47.648 79.7635,48.6692 78.8049,53.6251 83.7483,52.6039 84.7069,47.648"></polygon>
+</g>
+<!-- obj195889360 -->
+<g id="node7" class="node"><title>obj195889360</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="107.799,-89.6606 71.7991,-89.6606 71.7991,-53.6606 107.799,-53.6606 107.799,-89.6606"></polygon>
+</g>
+<!-- obj195889648 -->
+<g id="node8" class="node"><title>obj195889648</title>
+<polygon fill="none" stroke="black" points="134.201,-146.339 116.201,-128.339 134.201,-110.339 152.201,-128.339 134.201,-146.339"></polygon>
+</g>
+<!-- obj195889360&#45;&gt;obj195889648 -->
+<g id="edge8" class="edge"><title>obj195889360-&gt;obj195889648</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M104.093,-89.9061C109.454,-96.7505 115.524,-104.499 120.802,-111.236"></path>
+<polygon fill="black" stroke="black" points="120.967,-111.446 125.761,-113.026 126.147,-118.059 121.353,-116.479 120.967,-111.446"></polygon>
+</g>
+</g>
+</svg><h5>Legend</h5>
+<table border="1">
+<tr>
+<th bgcolor="#cccccc">Symbol</th>
+<th bgcolor="#cccccc">Component</th>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52pt" height="52pt" viewBox="0.00 0.00 52.00 52.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(26 26)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-26,26 -26,-26 26,-26 26,26 -26,26"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="black" points="18,7.45584 18,-7.45584 7.45584,-18 -7.45584,-18 -18,-7.45584 -18,7.45584 -7.45584,18 7.45584,18 18,7.45584"></polygon>
+<polygon fill="none" stroke="black" points="22,9.1127 22,-9.1127 9.1127,-22 -9.1127,-22 -22,-9.1127 -22,9.1127 -9.1127,22 9.1127,22 22,9.1127"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>Equipment</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44pt" height="44pt" viewBox="0.00 0.00 44.00 44.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22 22)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22,22 -22,-22 22,-22 22,22 -22,22"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="black" points="18,7.45584 18,-7.45584 7.45584,-18 -7.45584,-18 -18,-7.45584 -18,7.45584 -7.45584,18 7.45584,18 18,7.45584"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>Nozzle</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44pt" height="44pt" viewBox="0.00 0.00 44.00 44.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22 22)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22,22 -22,-22 22,-22 22,22 -22,22"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="blue" stroke-width="3" points="18,-18 -18,-18 -18,18 18,18 18,-18"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>PipingComponent</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45pt" height="44pt" viewBox="0.00 0.00 44.77 44.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(22.3831 22)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-22.3831,22 -22.3831,-22 22.3831,-22 22.3831,22 -22.3831,22"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<polygon fill="none" stroke="black" points="5.17463e-015,-18 -18.267,-2.20436e-015 -2.93756e-015,18 18.267,1.96425e-015 5.17463e-015,-18"></polygon>
+<text text-anchor="middle" x="0" y="3.7" font-family="Times New Roman,serif" font-size="14.00"> </text>
+</g>
+</g>
+</svg></td>
+<td>PipingNetworkSegment</td>
+</tr>
+<tr>
+<td align="center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19pt" height="19pt" viewBox="0.00 0.00 19.00 19.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(9.5 9.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-9.5,9.5 -9.5,-9.5 9.5,-9.5 9.5,9.5 -9.5,9.5"></polygon>
+<!-- id123 -->
+<g id="node1" class="node"><title>id123</title>
+<ellipse fill="orange" stroke="orange" cx="0" cy="-0" rx="5.5" ry="5.5"></ellipse>
+</g>
+</g>
+</svg></td>
+<td>PipingNode</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -438,21 +587,8 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>60</td>
+<td>59</td>
 </tr>
-</table>
-<h4>Data Attributes</h4>
-<table border="1">
-<thead><tr bgcolor="#cccccc">
-<th>Relation</th>
-<th>Value</th>
-</tr></thead>
-<tr>
-<td valign="top" rowspan="3">unknown relation</td>
-<td>"03"</td>
-</tr>
-<tr><td>"L"</td></tr>
-<tr><td>"V"</td></tr>
 </table>
 <h3 id="object-data-1.1.4"><a href="#overview-1.1.4">1.1.4 ProcessInstrumentationFunctions</a></h3>
 <h3 id="object-data-1.1.4.1"><a href="#overview-1.1.4.1">1.1.4.1 ProcessInstrumentationFunction 03</a></h3>
@@ -468,7 +604,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>100</td>
+<td>80</td>
 </tr>
 </table>
 <h4>Components</h4>
@@ -528,7 +664,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>130</td>
+<td>110</td>
 </tr>
 </table>
 <h3 id="object-data-1.1.4.1.2"><a href="#overview-1.1.4.1.2">1.1.4.1.2 ProcessSignalGeneratingFunctions</a></h3>
@@ -545,7 +681,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>152</td>
+<td>132</td>
 </tr>
 </table>
 <h3 id="object-data-1.1.4.1.3"><a href="#overview-1.1.4.1.3">1.1.4.1.3 SignalConveyingFunctions</a></h3>
@@ -562,7 +698,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>138</td>
+<td>118</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -593,7 +729,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>145</td>
+<td>125</td>
 </tr>
 </table>
 <h4>Model References</h4>
