@@ -1,1 +1,32 @@
 -H1008 a ShellAndTubeHeatExchanger ?
+-Ballvalve in Segment 6 Durchmesser von Nodes ??
+- "-0.1" ungültig für LowerLimitDesignPressure
+
+
+
+Bearbeitete Anmerkungen mth:
+PIF 4712.01
+- LocationSpec ist field (kein Querstrich im Bubble)   J
+SignalConveying Source: ProcessSignalGenerating   J
+ProcessSignalGenerating SensingLocation: Blind Flange   J
+47126-S5 : Flange hinter Ventil   J
+
+t-Stücke mit 3 nodes   J
+P4711->12   J
+einige nodes ohne diameter repres. (außer nodes von nozzles)   J
+  => Property breaks ausgelassen
+
+labels bei ventilen etc. -> pipingcomponantname...   J
+
+4712.01: PIFunctions = "I", PIFMod nicht da    J
+
+InstrumentationLoopFunction 4712.02 -> Verweis auf PIF   J
+
+4712.02 ProcessInstrumentationFunctionModifierAssignmentClass	"ICSA"
+        -> PIFunctions "ICSA"   J
+        
+ 4712.02 SignalConveyingFunction von PIF zu ActFunc   J
+ 
+ 1.1.1.1.1 1.1.1.1.2 ShutOffValveReference: ShutOffValveReference ???
+   SubTagNameAssignmentClass="PV 4712.02"   J
+   reference to Pipingcomponent   J
