@@ -1,6 +1,6 @@
 <html>
 <h1>DEXPI Verification Report</h1>
-<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-08-07 12:12:01.</p>
+<p>Created with DEXPI Verificator 0.4.2 RC 1 for DEXPI 1.2, Proteus 4.0.1 RC 2 on 2017-08-07 12:33:46.</p>
 <p><a href="#overview">Overview</a></p>
 <p><a href="#object-data">Object Data</a></p>
 <h2 id="overview">Overview</h2>
@@ -14,10 +14,10 @@
 <li id="overview-1.2">
 <a href="#object-data-1.2">1.2 StructureItems</a><ul>
 <li id="overview-1.2.1"><a href="#object-data-1.2.1">1.2.1 Isa95Enterprise</a></li>
-<li id="overview-1.2.2"><a href="#object-data-1.2.2">1.2.2 IndustrialComplexIso10209-2012</a></li>
-<li id="overview-1.2.3"><a href="#object-data-1.2.3">1.2.3 ProcessPlant</a></li>
-<li id="overview-1.2.4"><a href="#object-data-1.2.4">1.2.4 PlantSectionIso10209-2012</a></li>
-<li id="overview-1.2.5"><a href="#object-data-1.2.5">1.2.5 AreaIsa95</a></li>
+<li id="overview-1.2.2"><a href="#object-data-1.2.2">1.2.2 SiteIsa95</a></li>
+<li id="overview-1.2.3"><a href="#object-data-1.2.3">1.2.3 IndustrialComplexIso10209-2012</a></li>
+<li id="overview-1.2.4"><a href="#object-data-1.2.4">1.2.4 ProcessPlant</a></li>
+<li id="overview-1.2.5"><a href="#object-data-1.2.5">1.2.5 PlantSectionIso10209-2012</a></li>
 </ul>
 </li>
 </ul>
@@ -49,10 +49,10 @@
 <td valign="top" rowspan="5">StructureItems</td>
 <td><a href="#object-data-1.2.1">1.2.1 Isa95Enterprise</a></td>
 </tr>
-<tr><td><a href="#object-data-1.2.2">1.2.2 IndustrialComplexIso10209-2012</a></td></tr>
-<tr><td><a href="#object-data-1.2.3">1.2.3 ProcessPlant</a></td></tr>
-<tr><td><a href="#object-data-1.2.4">1.2.4 PlantSectionIso10209-2012</a></td></tr>
-<tr><td><a href="#object-data-1.2.5">1.2.5 AreaIsa95</a></td></tr>
+<tr><td><a href="#object-data-1.2.2">1.2.2 SiteIsa95</a></td></tr>
+<tr><td><a href="#object-data-1.2.3">1.2.3 IndustrialComplexIso10209-2012</a></td></tr>
+<tr><td><a href="#object-data-1.2.4">1.2.4 ProcessPlant</a></td></tr>
+<tr><td><a href="#object-data-1.2.5">1.2.5 PlantSectionIso10209-2012</a></td></tr>
 </table>
 <h3 id="object-data-1.1"><a href="#overview-1.1">1.1 Plant: Plant</a></h3>
 <h4>Meta Data</h4>
@@ -91,18 +91,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>54</td>
-</tr>
-</table>
-<h4>Model References</h4>
-<table border="1">
-<thead><tr bgcolor="#cccccc">
-<th>Relation</th>
-<th>Value</th>
-</tr></thead>
-<tr>
-<td valign="top" rowspan="1">AreaIsa95</td>
-<td><a href="#object-data-1.2.5">1.2.5 AreaIsa95</a></td>
+<td>51</td>
 </tr>
 </table>
 <h4>Data Attributes</h4>
@@ -141,7 +130,7 @@
 <td>16</td>
 </tr>
 </table>
-<h3 id="object-data-1.2.2"><a href="#overview-1.2.2">1.2.2 IndustrialComplexIso10209-2012</a></h3>
+<h3 id="object-data-1.2.2"><a href="#overview-1.2.2">1.2.2 SiteIsa95</a></h3>
 <h4>Meta Data</h4>
 <table border="1">
 <tr bgcolor="#cccccc">
@@ -150,7 +139,7 @@
 </tr>
 <tr>
 <td>Source ID</td>
-<td>PS_Complex</td>
+<td>Site95</td>
 </tr>
 <tr>
 <td>Source Line</td>
@@ -168,7 +157,34 @@
 <td><a href="#object-data-1.2.1">1.2.1 Isa95Enterprise</a></td>
 </tr>
 </table>
-<h3 id="object-data-1.2.3"><a href="#overview-1.2.3">1.2.3 ProcessPlant</a></h3>
+<h3 id="object-data-1.2.3"><a href="#overview-1.2.3">1.2.3 IndustrialComplexIso10209-2012</a></h3>
+<h4>Meta Data</h4>
+<table border="1">
+<tr bgcolor="#cccccc">
+<th>Type</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Source ID</td>
+<td>PS_Complex</td>
+</tr>
+<tr>
+<td>Source Line</td>
+<td>29</td>
+</tr>
+</table>
+<h4>Model References</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">ParentStructure</td>
+<td><a href="#object-data-1.2.2">1.2.2 SiteIsa95</a></td>
+</tr>
+</table>
+<h3 id="object-data-1.2.4"><a href="#overview-1.2.4">1.2.4 ProcessPlant</a></h3>
 <h4>Meta Data</h4>
 <table border="1">
 <tr bgcolor="#cccccc">
@@ -181,10 +197,21 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>31</td>
+<td>36</td>
 </tr>
 </table>
-<h3 id="object-data-1.2.4"><a href="#overview-1.2.4">1.2.4 PlantSectionIso10209-2012</a></h3>
+<h4>Model References</h4>
+<table border="1">
+<thead><tr bgcolor="#cccccc">
+<th>Relation</th>
+<th>Value</th>
+</tr></thead>
+<tr>
+<td valign="top" rowspan="1">ParentStructure</td>
+<td><a href="#object-data-1.2.3">1.2.3 IndustrialComplexIso10209-2012</a></td>
+</tr>
+</table>
+<h3 id="object-data-1.2.5"><a href="#overview-1.2.5">1.2.5 PlantSectionIso10209-2012</a></h3>
 <h4>Meta Data</h4>
 <table border="1">
 <tr bgcolor="#cccccc">
@@ -197,7 +224,7 @@
 </tr>
 <tr>
 <td>Source Line</td>
-<td>37</td>
+<td>43</td>
 </tr>
 </table>
 <h4>Model References</h4>
@@ -208,23 +235,7 @@
 </tr></thead>
 <tr>
 <td valign="top" rowspan="1">ParentStructure</td>
-<td><a href="#object-data-1.2.3">1.2.3 ProcessPlant</a></td>
-</tr>
-</table>
-<h3 id="object-data-1.2.5"><a href="#overview-1.2.5">1.2.5 AreaIsa95</a></h3>
-<h4>Meta Data</h4>
-<table border="1">
-<tr bgcolor="#cccccc">
-<th>Type</th>
-<th>Value</th>
-</tr>
-<tr>
-<td>Source ID</td>
-<td>AreaIsa95</td>
-</tr>
-<tr>
-<td>Source Line</td>
-<td>47</td>
+<td><a href="#object-data-1.2.4">1.2.4 ProcessPlant</a></td>
 </tr>
 </table>
 </html>

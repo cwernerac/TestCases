@@ -14,18 +14,27 @@
         ID = "PS_Enterprise85"
         ComponentClass = "Isa95Enterprise"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS10418236543">
+        <Association Type = "is a collection including" ItemID = "Site95"/>
+    </PlantStructureItem>
+    <PlantStructureItem
+        ID = "Site95"
+        ComponentClass = "SiteIsa95"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS10418236632">
+        <Association Type = "is a part of" ItemID = "PS_Enterprise85"/>
         <Association Type = "is a collection including" ItemID = "PS_Complex"/>
     </PlantStructureItem>
     <PlantStructureItem
         ID = "PS_Complex"
         ComponentClass = "IndustrialComplexIso10209-2012"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/IndustrialComplexIso10209-2012">
-        <Association Type = "is a part of" ItemID = "PS_Enterprise85"/>
+        <Association Type = "is a part of" ItemID = "Site95"/>
+        <Association Type = "is a collection including" ItemID = "PS_PP1"/>
     </PlantStructureItem>
     <PlantStructureItem
         ID = "PS_PP1"
         ComponentClass = "ProcessPlant"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS7151859">
+        <Association Type = "is a part of" ItemID = "PS_Complex"/>
         <Association Type = "is a collection including" ItemID = "Section1001"/>
     </PlantStructureItem>
     <PlantStructureItem
@@ -33,11 +42,6 @@
         ComponentClass = "PlantSectionIso10209-2012"
         ComponentClassURI = "http://sandbox.dexpi.org/rdl/PlantSectionIso10209-2012">
         <Association Type = "is a part of" ItemID = "PS_PP1"/>
-    </PlantStructureItem>
-    <PlantStructureItem
-        ID = "AreaIsa95"
-        ComponentClass = "AreaIsa95"
-        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS10418236534">
         <Association Type = "is the location of" ItemID = "Tank4750"/>
     </PlantStructureItem>
     <Equipment
@@ -45,7 +49,7 @@
         TagName = "T4750"
         ComponentClass = "Tank"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS445139">
-        <Association Type = "is located in" ItemID = "AreaIsa95"/>
+        <Association Type = "is located in" ItemID = "Section1001"/>
         <GenericAttributes Number = "2" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "TagNamePrefixAssignmentClass"
