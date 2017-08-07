@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlantModel>
+    <PlantInformation
+        Date = "2014-03-07"
+        Discipline = "PID"
+        Is3D = "no"
+        OriginatingSystem = "DEXPI Test"
+        SchemaVersion = "4.0.1"
+        Time = "13:34:01"
+        Units = "mm">
+        <UnitsOfMeasure/>
+    </PlantInformation>
+    <PlantStructureItem
+        ID = "PS_Enterprise85"
+        ComponentClass = "Isa95Enterprise"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS10418236543">
+        <Association Type = "is a collection including" ItemID = "PS_Complex"/>
+    </PlantStructureItem>
+    <PlantStructureItem
+        ID = "PS_Complex"
+        ComponentClass = "IndustrialComplexIso10209-2012"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/IndustrialComplexIso10209-2012">
+        <Association Type = "is a part of" ItemID = "PS_Enterprise85"/>
+    </PlantStructureItem>
+    <PlantStructureItem
+        ID = "PS_PP1"
+        ComponentClass = "ProcessPlant"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS7151859">
+        <Association Type = "is a collection including" ItemID = "Section1001"/>
+    </PlantStructureItem>
+    <PlantStructureItem
+        ID = "Section1001"
+        ComponentClass = "PlantSectionIso10209-2012"
+        ComponentClassURI = "http://sandbox.dexpi.org/rdl/PlantSectionIso10209-2012">
+        <Association Type = "is a part of" ItemID = "PS_PP1"/>
+    </PlantStructureItem>
+    <PlantStructureItem
+        ID = "AreaIsa95"
+        ComponentClass = "AreaIsa95"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS10418236534">
+        <Association Type = "is the location of" ItemID = "Tank4750"/>
+    </PlantStructureItem>
+    <Equipment
+        ID = "Tank4750"
+        TagName = "T4750"
+        ComponentClass = "Tank"
+        ComponentClassURI = "http://data.posccaesar.org/rdl/RDS445139">
+        <Association Type = "is located in" ItemID = "AreaIsa95"/>
+        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+            <GenericAttribute
+                Name = "TagNamePrefixAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
+                Value = "T"
+                Format = "string"/>
+            <GenericAttribute
+                Name = "TagNameSequenceNumberAssignmentClass"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
+                Value = "4750"
+                Format = "string"/>
+        </GenericAttributes>
+    </Equipment>
+</PlantModel>
