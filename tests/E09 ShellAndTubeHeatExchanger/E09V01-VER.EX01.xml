@@ -15,7 +15,7 @@
         TagName = "H-1008"
         ComponentClass = "ShellAndTubeHeatExchanger"
         ComponentClassURI = "http://data.posccaesar.org/rdl/RDS419084">
-        <GenericAttributes Number = "2" Set = "DexpiAttributes">
+        <GenericAttributes Number = "4" Set = "DexpiAttributes">
             <GenericAttribute
                 Name = "TagNamePrefixAssignmentClass"
                 AttributeURI = "http://sandbox.dexpi.org/rdl/TagNamePrefixAssignmentClass"
@@ -26,7 +26,38 @@
                 AttributeURI = "http://sandbox.dexpi.org/rdl/TagNameSequenceNumberAssignmentClass"
                 Value = "1008"
                 Format = "string"/>
+            <GenericAttribute
+                Name = "DesignHeatFlowRate"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/DesignHeatFlowRate"
+                Value = "313"
+                Format = "double"
+                Units = "Kilowatt"
+                UnitsURI = "http://data.posccaesar.org/rdl/RDS1330919"/>
+            <GenericAttribute
+                Name = "DesignHeatTransferArea"
+                AttributeURI = "http://sandbox.dexpi.org/rdl/DesignHeatTransferArea"
+                Value = "46.8"
+                Format = "double"
+                Units = "MetreSquared"
+                UnitsURI = "http://data.posccaesar.org/rdl/RDS1358009"/>
         </GenericAttributes>
+        <Nozzle
+            ID = "H1008-N1"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <Association Type = "is located in" ItemID = "H1008-C1"/>
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1008-N1-N0"/>
+                <Node ID = "H1008-N1-N1" Type = "process"/>
+            </ConnectionPoints>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N1"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Nozzle>
         <Nozzle
             ID = "H1008-N2"
             ComponentClass = "Nozzle"
@@ -41,55 +72,6 @@
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
                     Value = "N2"
-                    Format = "string"/>
-            </GenericAttributes>
-        </Nozzle>
-        <Nozzle
-            ID = "H1008-N4"
-            ComponentClass = "Nozzle"
-            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
-            <Association Type = "is located in" ItemID = "H1008-C1"/>
-            <ConnectionPoints NumPoints = "2">
-                <Node ID = "H1008-N4-N0"/>
-                <Node ID = "H1008-N4-N1" Type = "process"/>
-            </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N4"
-                    Format = "string"/>
-            </GenericAttributes>
-        </Nozzle>
-        <Equipment
-            ID = "H1008-C1"
-            TagName = "Chamber 1"
-            ComponentClass = "Chamber"
-            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
-            <Association Type = "is the location of" ItemID = "H1008-N2"/>
-            <Association Type = "is the location of" ItemID = "H1008-N4"/>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "CH 1"
-                    Format = "string"/>
-            </GenericAttributes>
-        </Equipment>
-        <Nozzle
-            ID = "H1008-N1"
-            ComponentClass = "Nozzle"
-            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
-            <Association Type = "is located in" ItemID = "H1008-C2"/>
-            <ConnectionPoints NumPoints = "2">
-                <Node ID = "H1008-N1-N0"/>
-                <Node ID = "H1008-N1-N1" Type = "process"/>
-            </ConnectionPoints>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
-                <GenericAttribute
-                    Name = "SubTagNameAssignmentClass"
-                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
-                    Value = "N1"
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
@@ -110,17 +92,84 @@
                     Format = "string"/>
             </GenericAttributes>
         </Nozzle>
-        <Equipment
-            ID = "H1008-C2"
-            ComponentClass = "Chamber"
-            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
-            <Association Type = "is the location of" ItemID = "H1008-N1"/>
-            <Association Type = "is the location of" ItemID = "H1008-N3"/>
+        <Nozzle
+            ID = "H1008-N4"
+            ComponentClass = "Nozzle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415214">
+            <Association Type = "is located in" ItemID = "H1008-C2"/>
+            <ConnectionPoints NumPoints = "2">
+                <Node ID = "H1008-N4-N0"/>
+                <Node ID = "H1008-N4-N1" Type = "process"/>
+            </ConnectionPoints>
             <GenericAttributes Number = "1" Set = "DexpiAttributes">
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "N4"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Nozzle>
+        <Equipment
+            ID = "H1008-C1-TB"
+            ComponentClass = "TubeBundle"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415259">
+            <GenericAttributes Number = "2" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "TubeLength"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS363869"
+                    Value = "2200"
+                    Format = "double"
+                    Units = "Millimetre"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1357739"/>
+                <GenericAttribute
+                    Name = "TubeMaterialOfConstructionCodeAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/TubeMaterialOfConstructionCodeAssignmentClass"
+                    Value = "1.4306"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Equipment>
+        <Equipment
+            ID = "H1008-C1"
+            ComponentClass = "Chamber"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+            <Association Type = "is the location of" ItemID = "H1008-N1"/>
+            <Association Type = "is the location of" ItemID = "H1008-N2"/>
+            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
+                    Value = "CH 1"
+                    Format = "string"/>
+            </GenericAttributes>
+        </Equipment>
+        <Equipment
+            ID = "H1008-C2"
+            ComponentClass = "Chamber"
+            ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+            <Association Type = "is the location of" ItemID = "H1008-N3"/>
+            <Association Type = "is the location of" ItemID = "H1008-N4"/>
+            <GenericAttributes Number = "4" Set = "DexpiAttributes">
+                <GenericAttribute
+                    Name = "SubTagNameAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
                     Value = "CH 2"
+                    Format = "string"/>
+                <GenericAttribute
+                    Name = "NominalDiameter"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS366794"
+                    Value = "800"
+                    Format = "double"
+                    Units = "Centimetre"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1318004"/>
+                <GenericAttribute
+                    Name = "NominalDiameterTypeRepresentationAssignmentClass"
+                    AttributeURI = "http://sandbox.dexpi.org/rdl/NominalDiameterTypeRepresentationAssignmentClass"
+                    Value = "DN"
+                    Format = "string"/>
+                <GenericAttribute
+                    Name = "MaterialOfConstructionCodeAssignmentClass"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS1460719741"
+                    Value = "1.4308"
                     Format = "string"/>
             </GenericAttributes>
         </Equipment>
