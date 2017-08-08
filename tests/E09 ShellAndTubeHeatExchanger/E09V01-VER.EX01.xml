@@ -113,6 +113,7 @@
             ID = "H1008-C1-TB"
             ComponentClass = "TubeBundle"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS415259">
+            <Association Type = "is located in" ItemID = "H1008-C1"/>
             <GenericAttributes Number = "2" Set = "DexpiAttributes">
                 <GenericAttribute
                     Name = "TubeLength"
@@ -132,14 +133,43 @@
             ID = "H1008-C1"
             ComponentClass = "Chamber"
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
+            <Association Type = "is the location of" ItemID = "H1008-C1-TB"/>
             <Association Type = "is the location of" ItemID = "H1008-N1"/>
             <Association Type = "is the location of" ItemID = "H1008-N2"/>
-            <GenericAttributes Number = "1" Set = "DexpiAttributes">
+            <GenericAttributes Number = "5" Set = "DexpiAttributes">
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
                     Value = "CH 1"
                     Format = "string"/>
+                <GenericAttribute
+                    Name = "LowerLimitDesignPressure"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360674"
+                    Value = "-1"
+                    Format = "double"
+                    Units = "BarGauge"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1348874"/>
+                <GenericAttribute
+                    Name = "UpperLimitDesignPressure"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS1470835011"
+                    Value = "60"
+                    Format = "double"
+                    Units = "BarGauge"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1348874"/>
+                <GenericAttribute
+                    Name = "LowerLimitDesignTemperature"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360494"
+                    Value = "-45"
+                    Format = "double"
+                    Units = "DegreeCelsius"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1322684"/>
+                <GenericAttribute
+                    Name = "UpperLimitDesignTemperature"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360449"
+                    Value = "100"
+                    Format = "double"
+                    Units = "DegreeCelsius"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1322684"/>
             </GenericAttributes>
         </Equipment>
         <Equipment
@@ -148,12 +178,40 @@
             ComponentClassURI = "http://data.posccaesar.org/rdl/RDS903151421">
             <Association Type = "is the location of" ItemID = "H1008-N3"/>
             <Association Type = "is the location of" ItemID = "H1008-N4"/>
-            <GenericAttributes Number = "4" Set = "DexpiAttributes">
+            <GenericAttributes Number = "8" Set = "DexpiAttributes">
                 <GenericAttribute
                     Name = "SubTagNameAssignmentClass"
                     AttributeURI = "http://sandbox.dexpi.org/rdl/SubTagNameAssignmentClass"
                     Value = "CH 2"
                     Format = "string"/>
+                <GenericAttribute
+                    Name = "LowerLimitDesignPressure"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360674"
+                    Value = "-1"
+                    Format = "double"
+                    Units = "BarGauge"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1348874"/>
+                <GenericAttribute
+                    Name = "UpperLimitDesignPressure"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS1470835011"
+                    Value = "30"
+                    Format = "double"
+                    Units = "BarGauge"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1348874"/>
+                <GenericAttribute
+                    Name = "LowerLimitDesignTemperature"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360494"
+                    Value = "-45"
+                    Format = "double"
+                    Units = "DegreeCelsius"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1322684"/>
+                <GenericAttribute
+                    Name = "UpperLimitDesignTemperature"
+                    AttributeURI = "http://data.posccaesar.org/rdl/RDS360449"
+                    Value = "100"
+                    Format = "double"
+                    Units = "DegreeCelsius"
+                    UnitsURI = "http://data.posccaesar.org/rdl/RDS1322684"/>
                 <GenericAttribute
                     Name = "NominalDiameter"
                     AttributeURI = "http://data.posccaesar.org/rdl/RDS366794"
